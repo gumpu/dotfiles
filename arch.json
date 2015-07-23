@@ -1,7 +1,12 @@
 
+
 {
     "directories": [
         "~/justtesting",
+        "~/.vim",
+        "~/.vim/bundle",
+        "~/.vim/autoload",
+        "~/.vim/spell",
         "~/.i3",
         "~/.crafty",
         "~/.crafty/books",
@@ -18,8 +23,8 @@
         "taskrc":        "~/.taskrc",
         "Rprofile":      "~/.Rprofile",
         "tmux.conf":     "~/.tmux.conf",
-        "vimrc":         "~/justtesting/.vimrc",
-        "gvimrc":        "~/justtesting/.gvimrc",
+        "vim/vimrc":     "~/.vimrc",
+        "vim/gvimrc":    "~/.gvimrc",
         "craftyrc":      "~/.craftyrc"
     },
 
