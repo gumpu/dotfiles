@@ -1,0 +1,127 @@
+" Frans Slothouber
+"
+" This should always be first.
+execute pathogen#infect()
+" Enable Vim features.
+set nocompatible
+Helptags
+
+set encoding=utf-8
+"=========================================================================
+map <Left>  <Nop>
+map <Right> <Nop>
+map <Up>    <Nop>
+map <Down>  <Nop>
+"=========================================================================
+syntax enable
+filetype plugin on
+filetype indent on
+
+"=========================================================================
+" Switch on syntax highlighting.
+" Use 256 colours
+" set t_Co=256
+set t_Co=256
+set background=dark
+colorscheme solarized
+
+"=========================================================================
+" Switch on search pattern highlighting
+set hlsearch
+" Which directory to use for the file browser.
+" set browsedir=buffer
+" Briefly show a matching brace.
+set showmatch
+" Use the  vi:noai:sw=3. The line found at the end or begin of a file.
+set modeline
+" Auto-wrap after 78 characters.
+set textwidth=78
+" Number of spaces that a <Tab> in the file counts for.
+set ts=4
+set sw=4
+" Allow backspacing over everything in insert mode.
+set backspace=indent,eol,start
+
+" We want to see at least ten lines above and below the cursor.
+set so=15
+" Highlight the line the cursor is on.
+set cursorline
+
+"=============== V I M I N F O =========================
+" read/write a .viminfo file,
+" (1) don't store more than 500 lines of registers
+" (2) remember the buffer list of the previous session.
+"     to use this start gvim without a filename.
+" (3) Remember up-to 200 files.
+set viminfo='20,\"500,%
+" Keep 500 lines of command line history
+set history=500
+" Never switch this off as per manual.
+set magic
+" Expand tabs to spaces, tabs are EVIL!
+set expandtab
+" Make command line one line high.
+set ch=1
+
+" t -- Auto-wrap text.
+" c -- Auto-wrap comments.
+" r -- Automatically insert the current comment leader.
+" q -- Allow formatting of comments with "gq".
+" l -- Long lines are not broken in insert mode: When a line was longer than
+"      'textwidth' when the insert command started, Vim does not
+"      automatically format it.
+set formatoptions=qrtcl
+
+"======================== STATUS LINE ============================
+" Handled by airline
+set noruler
+" Always show a status line.
+set laststatus=2
+
+"==========================================================================
+" Show spaces and tabs... very handy
+set list
+set listchars=tab:>.,trail:.
+" No utterly annoying beep!!!!
+set vb t_vb=""
+
+"===================== VIM R Plugin =======================================
+" Do _not_ replace _ with <-
+let vimrplugin_assign = 0
+" Send visually selected lines to R
+let vimrplugin_map_r = 1
+" We love folding, also in R.
+let r_syntax_folding = 1
+
+"==========================================================================
+" Airline
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols for the status bar.
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+let g:airline#extensions#virtualenv#enabled = 1
+"==========================================================================
+" NERDTree
+"
+" Short-cut to toggle NERDTree window
+
+map <C-n> :NERDTreeToggle<CR>
+" Replace  :e .
+let NERDTreeHijackNetrw=1
+"
+"==========================================================================
+"
