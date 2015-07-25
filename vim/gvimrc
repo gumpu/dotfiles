@@ -14,7 +14,7 @@ map! <S-Insert> <MiddleMouse>
 " Hide the mouse pointer while typing
 set mousehide
 set mousemodel=popup_setpos
-set number
+set relativenumber
 
 "=============================================
 "      C O L O U R S

@@ -119,7 +119,7 @@
 !LI 
 
 Xcursor.size:   16
-Xcursor.theme:  redglass
+Xcursor.theme:  whiteglass
 Xcursor.theme_core: true
 Xft.antialias:   1
 Xft.hinting:    -1
@@ -129,7 +129,7 @@ Xft.hintstyle:  hintfull
 ! rxvt
 URxvt.buffered:       true
 URxvt.cursorBlink:    true
-URxvt.font:             xft:inconsolata:pixelsize=14
+! URxvt.font:             xft:inconsolata:pixelsize=12
 *.font:xft:Droid Sans Mono:pixelsize=11:antialias=true
 !URxvt*font:           -misc-fixed-medium-r-semicondensed-*-12-90-100-*-c-60-iso8859-1
 

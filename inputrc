@@ -1,3 +1,6 @@
 # No BEEP!  
+# Who every thought is was a good idea
+# to make the console beep when
+# making mistakes!
 set bell-style none
 set editing-mode vi
