@@ -1,3 +1,4 @@
+"
 " Frans Slothouber
 "
 " This should always be first.
@@ -6,6 +7,8 @@ execute pathogen#infect()
 set nocompatible
 Helptags
 
+
+
 set encoding=utf-8
 "=========================================================================
 " Remove cursor keys, they slow you down.
@@ -13,13 +16,19 @@ map <Left>  <Nop>
 map <Right> <Nop>
 map <Up>    <Nop>
 map <Down>  <Nop>
+set mousehide
 "=========================================================================
-syntax enable
 filetype plugin on
 filetype indent on
 
 "=========================================================================
+" No utterly annoying beep!!!! What moron did think beeping was a
+" good idea!
+set vb t_vb=""
+
+"=========================================================================
 " Switch on syntax highlighting.
+syntax enable
 " Use 256 colours
 " set t_Co=256
 set t_Co=256
@@ -51,6 +60,17 @@ set cursorline
 " This makes is real reasy to jump to the right line
 " with   k and j   (i.e.  5j 12j 3k etc)
 set relativenumber
+
+"=======================================================
+" Completion options
+" .=Current buffer, w=other windows, b=other loader buffers,
+" t=tag completion, i=included files,kspell=current active spell checking
+set complete=.,w,b,u,t,i,kspell
+
+" In all most all files I want spellchecking.
+set spell
+" And I usuall write in English
+set spelllang=en
 
 "=============== V I M I N F O =========================
 " read/write a .viminfo file,
@@ -87,9 +107,6 @@ set laststatus=2
 " Show spaces and tabs... very handy
 set list
 set listchars=tab:>.,trail:.
-" No utterly annoying beep!!!!
-set vb t_vb=""
-
 "===================== VIM R Plugin =======================================
 " Do _not_ replace _ with <-
 let vimrplugin_assign = 0
