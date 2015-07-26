@@ -2,9 +2,6 @@
 "----------------------------------------------------------
 " File:        gvimrc
 " By:          Frans Slothouber
-" Created:     2001
-"
-" Tested on:   Linux (Redhat), Win32, Ubuntu, VMS
 "
 "=============================================
 " Make shift-insert work like in Xterm
@@ -27,6 +24,7 @@ set guicursor+=a:blinkon0
 "=============================================
 set go-=T
 set go-=m
+"
 " No Beep!!!
 set vb t_vb=""
 " It is wise not to set a font but use the default instead.  The
@@ -37,4 +35,4 @@ set guifont=Droid\ Sans\ Mono\ 8
 " Font work better in gvim, so lets use some nice unicode.
 " set listchars=tab:»˽,trail:˽,eol:¶
 set listchars=tab:»˽,trail:˽
-
+"---------------------------------------------------------------------
