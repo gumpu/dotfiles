@@ -54,19 +54,22 @@ set backspace=indent,eol,start
 
 " We want to see at least ten lines above and below the cursor.
 set so=15
+if $FAST
 " Highlight the line the cursor is on.
+" Not advisable for slow connections.
 set cursorline
 " Make the line numbers relative to the current line
 " This makes is real reasy to jump to the right line
 " with   k and j   (i.e.  5j 12j 3k etc)
+" Also not advisable for slow connections.
 set relativenumber
+endif
 
 "=======================================================
 " Completion options
 " .=Current buffer, w=other windows, b=other loader buffers,
 " t=tag completion, i=included files,kspell=current active spell checking
 set complete=.,w,b,u,t,i,kspell
-
 " In all most all files I want spellchecking.
 set spell
 " And I usuall write in English
@@ -85,9 +88,8 @@ set history=500
 set magic
 " Expand tabs to spaces, tabs are EVIL!
 set expandtab
-" Make command line one line high.
-set ch=1
 
+"======== Formatting ======================================
 " t -- Auto-wrap text.
 " c -- Auto-wrap comments.
 " r -- Automatically insert the current comment leader.
@@ -98,6 +100,8 @@ set ch=1
 set formatoptions=qrtcl
 
 "======================== STATUS LINE ============================
+" Make command line one line high.
+set ch=1
 " Handled by airline
 set noruler
 " Always show a status line.
@@ -107,6 +111,7 @@ set laststatus=2
 " Show spaces and tabs... very handy
 set list
 set listchars=tab:>.,trail:.
+
 "===================== VIM R Plugin =======================================
 " Do _not_ replace _ with <-
 let vimrplugin_assign = 0
