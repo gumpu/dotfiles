@@ -1,7 +1,6 @@
 
 {
     "directories": [
-        "~/justtesting",
         "~/.vim",
         "~/.vim/bundle",
         "~/.vim/autoload",
@@ -25,6 +24,11 @@
         "vim/vimrc":     "~/.vimrc",
         "vim/gvimrc":    "~/.gvimrc",
         "craftyrc":      "~/.craftyrc"
+    },
+
+    "copy": {
+        "vim/autoload/pathogen.vim": "~/.vim/autoload/pathogen.vim",
+        "vim/get_plugins.sh": "~/.vim/bundle/get_plugins.sh"
     },
 
     "commands": ["echo hello"]
