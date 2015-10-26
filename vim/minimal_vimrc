@@ -1,0 +1,102 @@
+"
+" Enable Vim features.
+set nocompatible
+set encoding=utf-8
+"=========================================================================
+filetype plugin on
+filetype indent on
+
+"=========================================================================
+" No utterly annoying beep!!!! What moron did think beeping was a
+" good idea!
+set vb t_vb=""
+
+"=========================================================================
+" Switch on syntax highlighting.
+syntax enable
+" Use 256 colours
+" set t_Co=256
+set t_Co=256
+set background=dark
+"colorscheme solarized
+
+"=========================================================================
+" Switch on search pattern highlighting
+set hlsearch
+" Which directory to use for the file browser.
+" set browsedir=buffer
+" Briefly show a matching brace.
+set showmatch
+" Use the  vi:noai:sw=3. The line found at the end or begin of a file.
+set modeline
+" Auto-wrap after 78 characters.
+set textwidth=78
+" Number of spaces that a <Tab> in the file counts for.
+set ts=4
+set sw=4
+" Allow backspacing over everything in insert mode.
+set backspace=indent,eol,start
+
+" We want to see at least ten lines above and below the cursor.
+set so=15
+if $FAST
+" Highlight the line the cursor is on.
+" Not advisable for slow connections.
+set cursorline
+" Make the line numbers relative to the current line
+" This makes is real reasy to jump to the right line
+" with   k and j   (i.e.  5j 12j 3k etc)
+" Also not advisable for slow connections.
+set relativenumber
+endif
+
+"=======================================================
+" Completion options
+" .=Current buffer, w=other windows, b=other loader buffers,
+" t=tag completion, i=included files,kspell=current active spell checking
+set complete=.,w,b,u,t,i
+
+" Seach for tags in tags file and look for it up
+" in the directory tree too.
+set tags=tags;
+
+"=============== V I M I N F O =========================
+" read/write a .viminfo file,
+" (1) don't store more than 500 lines of registers
+" (2) remember the buffer list of the previous session.
+"     to use this start gvim without a filename.
+" (3) Remember up-to 200 files.
+set viminfo='20,\"500,%
+" Keep 500 lines of command line history
+set history=500
+" Never switch this off as per manual.
+set magic
+" Expand tabs to spaces, tabs are EVIL!
+set expandtab
+
+"======== Formatting ======================================
+" t -- Auto-wrap text.
+" c -- Auto-wrap comments.
+" r -- Automatically insert the current comment leader.
+" q -- Allow formatting of comments with "gq".
+" l -- Long lines are not broken in insert mode: When a line was longer than
+"      'textwidth' when the insert command started, Vim does not
+"      automatically format it.
+set formatoptions=qrtcl
+
+"======================== STATUS LINE ============================
+" Make command line one line high.
+set ch=1
+" Handled by airline
+set noruler
+" Always show a status line.
+set laststatus=2
+"%f filename %y filetype %h helpfile? %m modified? %w preview? 
+"%r readonly? %B ascii code  %l linenumber  $c column number
+"%P percentage  %n buffernumber
+set statusline=%<%f%y%h%m%w%r\ 0x%02B%7l,%5c%V\ %P\ \ %n
+"
+"==========================================================================
+" Show spaces and tabs... very handy
+set list
+set listchars=tab:>.,trail:.
