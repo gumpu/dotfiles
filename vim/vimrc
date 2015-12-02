@@ -7,15 +7,13 @@ execute pathogen#infect()
 set nocompatible
 Helptags
 
-
-
 set encoding=utf-8
 "=========================================================================
 " Remove cursor keys, they slow you down.
-map <Left>  <Nop>
-map <Right> <Nop>
-map <Up>    <Nop>
-map <Down>  <Nop>
+" map <Left>  <Nop>
+" map <Right> <Nop>
+" map <Up>    <Nop>
+" map <Down>  <Nop>
 set mousehide
 "=========================================================================
 filetype plugin on
@@ -75,6 +73,10 @@ set spell
 " And I usuall write in English
 set spelllang=en
 
+" Seach for tags in tags file and look for it up
+" in the directory tree too.
+set tags=tags;
+
 "=============== V I M I N F O =========================
 " read/write a .viminfo file,
 " (1) don't store more than 500 lines of registers
@@ -119,9 +121,9 @@ let vimrplugin_assign = 0
 let vimrplugin_map_r = 1
 " We love folding, also in R.
 let r_syntax_folding = 1
-" Do a vertical split. So we have vim on one side
+" Set to 1 to do a vertical split. So we have vim on one side
 " and the R console on the otherside.
-let vimrplugin_vsplit = 1
+let vimrplugin_vsplit = 0
 
 "==========================================================================
 " Airline

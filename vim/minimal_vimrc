@@ -1,4 +1,8 @@
 "
+" This is a minimal but still good vimrc file.
+" Can be used to quickly get a nice vim setup
+" without having to download a whole bunch of stuff.
+"
 " Enable Vim features.
 set nocompatible
 set encoding=utf-8
