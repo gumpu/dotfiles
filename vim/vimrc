@@ -120,7 +120,7 @@ let vimrplugin_assign = 0
 " Send visually selected lines to R
 let vimrplugin_map_r = 1
 " We love folding, also in R.
-let r_syntax_folding = 1
+let r_syntax_folding = 0
 " Set to 1 to do a vertical split. So we have vim on one side
 " and the R console on the otherside.
 let vimrplugin_vsplit = 0

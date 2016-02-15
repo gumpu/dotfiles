@@ -1,0 +1,29 @@
+#kill startup message
+startup_message off
+
+# when screen fails to run with the message
+#   Cannot make directory '/var/run/screen': Permission denied
+# do a
+#   sudo /etc/init.d/screen-cleanup start
+
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+attrcolor b ".I"
+# tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+altscreen  on
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%= %3n %t%? [%h]%? %= %m/%d %C%a"
+caption    always
+caption    string "%= %-w%L>%{= BW}%n*%t%{-}%52<%+w %L="
+
+# 1024 lines of scrollback history for every window
+# use ^a [ to access
+defscrollback 4048
+
+# normally freezes parent, and is easily confused with ^a S
+bind  s
+vbell off
+

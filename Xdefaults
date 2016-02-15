@@ -129,8 +129,10 @@ Xft.hintstyle:  hintfull
 ! rxvt
 URxvt.buffered:       true
 URxvt.cursorBlink:    true
-! URxvt.font:             xft:inconsolata:pixelsize=12
-*.font:xft:Droid Sans Mono:pixelsize=11:antialias=true
+!URxvt.font:             xft:inconsolata:pixelsize=12
+!*.font:             xft:inconsolata:pixelsize=12
+!*.font:xft:Droid Sans Mono:pixelsize=11:antialias=true
+*.font:xft:Monofur:pixelsize=14:antialias=true
 !URxvt*font:           -misc-fixed-medium-r-semicondensed-*-12-90-100-*-c-60-iso8859-1
 
 ! Move letters closer together. Looks better.
