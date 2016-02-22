@@ -1,0 +1,14 @@
+
+CTRL-X  with the X from context
+
+    CTRL-X CTRL-F       file names
+    CTRL-X CTRL-L       whole lines
+    CTRL-X CTRL-D       macro definitions (also in included files)
+    CTRL-X CTRL-I       current and included files
+    CTRL-X CTRL-K       words from a dictionary
+    CTRL-X CTRL-T       words from a thesaurus
+    CTRL-X CTRL-]       tags
+    CTRL-X CTRL-V       Vim command line
+
+
+
