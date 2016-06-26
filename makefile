@@ -1,4 +1,4 @@
 
 update :
-	python dotty/dotty.py -r arch.json
+	python3 dotty/dotty.py -r arch.json
 
