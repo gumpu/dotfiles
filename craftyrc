@@ -2,8 +2,8 @@
 ## Crafty chess engine configuration
 #
 #smpmt=4 ## number of cores used by Crafty
-hash=1024M ## size of the transposition/refutation hash table
-hashp=256M ## size of the pawn structure/king safety hash table
+#hash=1024M ## size of the transposition/refutation hash table
+#hashp=256M ## size of the pawn structure/king safety hash table
 #ponder=on ## think at opponent's time
 swindle=on ## try to win drawn games (according to egtb)
 learn=7 ## book, position and result learning

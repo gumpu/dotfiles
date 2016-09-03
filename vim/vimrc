@@ -20,6 +20,9 @@ filetype plugin on
 filetype indent on
 
 "=========================================================================
+set showbreak=↪
+
+"=========================================================================
 " No utterly annoying beep!!!! What moron did think beeping was a
 " good idea!
 set vb t_vb=""
@@ -31,7 +34,7 @@ syntax enable
 " set t_Co=256
 set t_Co=256
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 
 "=========================================================================
 " Switch on search pattern highlighting

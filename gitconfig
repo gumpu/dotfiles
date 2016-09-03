@@ -1,8 +1,10 @@
 
 
 [user]
-	email = rfsber@xs4all.nl
+	email = frans.slothouber@intraffic.nl
 	name = Frans Slothouber
 [push]
-	default = simple
+#	default = simple
 
+[push]
+	default = simple
