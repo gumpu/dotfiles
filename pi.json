@@ -4,27 +4,17 @@
         "~/.vim",
         "~/.vim/bundle",
         "~/.vim/autoload",
-        "~/.vim/spell",
-        "~/.i3",
-        "~/.crafty",
-        "~/.crafty/books",
-        "~/.crafty/logs"
+        "~/.vim/spell"
     ],
 
     "link": {
         "screenrc":      "~/.screenrc",
-        "i3status.conf": "~/.i3status.conf",
-        "i3config":      "~/.i3/config",
         "gitconfig":     "~/.gitconfig",
-        "xinitrc":       "~/.xinitrc",
         "inputrc":       "~/.inputrc",
-        "Xdefaults":     "~/.Xdefaults",
         "taskrc":        "~/.taskrc",
         "Rprofile":      "~/.Rprofile",
         "tmux.conf":     "~/.tmux.conf",
-        "vim/vimrc":     "~/.vimrc",
-        "vim/gvimrc":    "~/.gvimrc",
-        "craftyrc":      "~/.craftyrc"
+        "vim/vimrc":     "~/.vimrc"
     },
 
     "copy": {

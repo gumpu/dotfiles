@@ -71,8 +71,8 @@ endif
 " .=Current buffer, w=other windows, b=other loader buffers,
 " t=tag completion, i=included files,kspell=current active spell checking
 set complete=.,w,b,u,t,i,kspell
-" In all most all files I want spellchecking.
-set spell
+" This is a bad idea, some files are really not suited for spell checking.
+" set spell
 " And I usuall write in English
 set spelllang=en
 

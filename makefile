@@ -1,4 +1,9 @@
+all :
+	echo 'Select an architecture'
 
-update :
+pi :
+	python3 ./dotty/dotty.py -r pi.json
+
+arch :
 	python3 ./dotty/dotty.py -r arch.json
 
