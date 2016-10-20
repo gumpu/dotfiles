@@ -72,7 +72,7 @@ endif
 " t=tag completion, i=included files,kspell=current active spell checking
 set complete=.,w,b,u,t,i,kspell
 " In all most all files I want spellchecking.
-set spell
+set nospell
 " And I usuall write in English
 set spelllang=en
 

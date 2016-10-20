@@ -30,7 +30,7 @@ set vb t_vb=""
 " It is wise not to set a font but use the default instead.  The
 " selected font might not be available on the system vim is being
 " installed on.
-set guifont=Monofur\ 12
+"set guifont=Monofur\ 12
 "set guifont=Droid\ Sans\ Mono\ 8
 "set guifont=Droid\ Sans\ Mono\ 10
 "set guifont=Droid\ Sans\ Mono\ 16

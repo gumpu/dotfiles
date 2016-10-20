@@ -19,6 +19,8 @@
         "inputrc":       "~/.inputrc",
         "Xdefaults":     "~/.Xdefaults",
         "taskrc":        "~/.taskrc",
+        "bash_aliases":  "~/.bash_aliases",
+        "screenrc":      "~/.screenrc",
         "Rprofile":      "~/.Rprofile",
         "tmux.conf":     "~/.tmux.conf",
         "vim/vimrc":     "~/.vimrc",
