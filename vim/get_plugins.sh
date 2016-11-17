@@ -8,6 +8,7 @@ git clone https://github.com/altercation/vim-colors-solarized.git
 git clone https://github.com/vim-scripts/taglist.vim.git
 git clone https://github.com/mileszs/ack.vim.git
 git clone https://github.com/vim-scripts/a.vim.git
+git clone https://github.com/embear/vim-localvimrc.git
 
 # Vim-R-Plugin
 # Also need vimcom_1.2-6.tar.gz 

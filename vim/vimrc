@@ -160,3 +160,9 @@ let NERDTreeHijackNetrw=1
 "
 "==========================================================================
 "
+
+" For the super handy vim-localvimrc plugin
+" <https://github.com/embear/vim-localvimrc>
+let g:localvimrc_whitelist='/home/frans/Documents/.*'
+
+
