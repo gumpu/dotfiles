@@ -22,15 +22,15 @@ highlight ColorColumn ctermbg=235 guibg=#2c2d27
 set guicursor+=a:blinkon0
 
 "=============================================
-set go-=T
-set go-=m
+"set go-=T
+"set go-=m
 "
 " No Beep!!!
 set vb t_vb=""
 " It is wise not to set a font but use the default instead.  The
 " selected font might not be available on the system vim is being
 " installed on.
-set guifont=Monofur\ 12
+set guifont=Monospace\ 14
 "set guifont=Droid\ Sans\ Mono\ 8
 "set guifont=Droid\ Sans\ Mono\ 10
 "set guifont=Droid\ Sans\ Mono\ 16
@@ -39,3 +39,4 @@ set guifont=Monofur\ 12
 " set listchars=tab:»˽,trail:˽,eol:¶
 set listchars=tab:»˽,trail:˽
 "---------------------------------------------------------------------
+"

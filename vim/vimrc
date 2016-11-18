@@ -73,6 +73,7 @@ endif
 set complete=.,w,b,u,t,i,kspell
 " This is a bad idea, some files are really not suited for spell checking.
 " set spell
+set nospell
 " And I usuall write in English
 set spelllang=en
 
@@ -160,3 +161,9 @@ let NERDTreeHijackNetrw=1
 "
 "==========================================================================
 "
+
+" For the super handy vim-localvimrc plugin
+" <https://github.com/embear/vim-localvimrc>
+let g:localvimrc_whitelist='/home/frans/Documents/.*'
+
+
