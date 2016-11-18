@@ -2,6 +2,9 @@
 " Frans Slothouber
 "
 " This should always be first.
+" pathogen is very handy. Allows you to add and more important
+" remove plugings with ease.
+"
 execute pathogen#infect()
 " Enable Vim features.
 set nocompatible
@@ -10,11 +13,13 @@ Helptags
 set encoding=utf-8
 "=========================================================================
 " Remove cursor keys, they slow you down.
+" Tried this, but it conflicts with most other applications and
+" confuse you fingers in the end.
 " map <Left>  <Nop>
 " map <Right> <Nop>
 " map <Up>    <Nop>
 " map <Down>  <Nop>
-set mousehide
+
 "=========================================================================
 filetype plugin on
 filetype indent on
@@ -31,7 +36,6 @@ set vb t_vb=""
 " Switch on syntax highlighting.
 syntax enable
 " Use 256 colours
-" set t_Co=256
 set t_Co=256
 set background=dark
 " colorscheme solarized
@@ -39,8 +43,6 @@ set background=dark
 "=========================================================================
 " Switch on search pattern highlighting
 set hlsearch
-" Which directory to use for the file browser.
-" set browsedir=buffer
 " Briefly show a matching brace.
 set showmatch
 " Use the  vi:noai:sw=3. The line found at the end or begin of a file.
@@ -55,6 +57,12 @@ set backspace=indent,eol,start
 
 " We want to see at least ten lines above and below the cursor.
 set so=15
+"
+"=======================================================
+" This only works if you did a:
+"   export FAST=1
+" on you shell before stating vim.
+" Reason is that this is bandwidth intensive.
 if $FAST
 " Highlight the line the cursor is on.
 " Not advisable for slow connections.
@@ -65,6 +73,7 @@ set cursorline
 " Also not advisable for slow connections.
 set relativenumber
 endif
+"=======================================================
 
 "=======================================================
 " Completion options

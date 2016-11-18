@@ -22,11 +22,13 @@ highlight ColorColumn ctermbg=235 guibg=#2c2d27
 set guicursor+=a:blinkon0
 
 "=============================================
-"set go-=T
-"set go-=m
-"
-" No Beep!!!
+" I never use the toolbar. 
+set go-=T
+" Once in a while I use the menubar
+set go-=m
+" No Beep!!! Who ever thought this was a good idea??
 set vb t_vb=""
+
 " It is wise not to set a font but use the default instead.  The
 " selected font might not be available on the system vim is being
 " installed on.
