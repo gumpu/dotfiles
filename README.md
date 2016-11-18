@@ -12,10 +12,11 @@ as possible from the command line.  The main tools I use are:
 - Python
 - R
 - C
+- gdb
 - git
 - task
 - ssh
-- tmux
+- screen (and tmux)
 
 
 This on Arch Linux with i3 as Window Manager.
@@ -26,8 +27,5 @@ This repository contains some files from:
 
 - Tim Pope <https://github.com/tpope/vim-pathogen>
 - Vibhav Pant <https://github.com/vibhavp/dotty>
-
-
-
 
 vi: spell spl=en

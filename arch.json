@@ -18,6 +18,7 @@
         "gitconfig":     "~/.gitconfig",
         "xinitrc":       "~/.xinitrc",
         "inputrc":       "~/.inputrc",
+        "gdbinit":       "~/.gdbinit",
         "Xdefaults":     "~/.Xdefaults",
         "taskrc":        "~/.taskrc",
         "bash_aliases":  "~/.bash_aliases",
@@ -34,6 +35,6 @@
         "vim/get_plugins.sh": "~/.vim/bundle/get_plugins.sh"
     },
 
-    "commands": ["echo hello"]
+    "commands": ["echo hello world"]
 }
 

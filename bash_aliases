@@ -16,5 +16,6 @@ export HISTSIZE=-1
 # This only works if HISTFILESIZE is not set in .bashrc
 export HISTFILESIZE=-1
 # Append command history, don't overwrite it.
+export HISTIGNORE=ls
 shopt -s histappend
 
