@@ -1,9 +1,10 @@
-#Dot Files
+# Dot Files
 
-This is my collection of dotfiles plus some tools to install them in the
-correct place. I have tried to document why I chose each setting.
+This is my collection of configuration files (dotfiles). It also includes
+tools to install them in the correct place. I have tried to document why I
+chose each setting. Maybe it is of use to someone else too.
 
-#Context
+## Context
 
 I am a software developer with a love for data science. I prefer to to as much
 as possible from the command line.  The main tools I use are:
@@ -11,15 +12,16 @@ as possible from the command line.  The main tools I use are:
 - Vim
 - Python
 - R
-- C
+- C (gcc)
 - gdb
 - git
 - task
 - ssh
 - screen (and tmux)
+- tig
 
-
-This on Arch Linux with i3 as Window Manager.
+This on Ubuntu Linux with i3 as Window Manager.
+Also works under Arch and RaspberryPi.
 
 ## Disclaimer
 

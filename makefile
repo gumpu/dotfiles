@@ -9,3 +9,7 @@ arch :
 
 ubuntu :
 	python3 ./dotty/dotty.py -r ubuntu.json
+
+clean :
+	echo 'Done'
+
