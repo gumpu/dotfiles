@@ -21,7 +21,7 @@ caption    string "%= %-w%L>%{= BW}%n*%t%{-}%52<%+w %L="
 
 # 1024 lines of scrollback history for every window
 # use ^a [ to access
-defscrollback 4048
+defscrollback 4096
 
 # normally freezes parent, and is easily confused with ^a S
 bind  s
