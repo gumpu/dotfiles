@@ -9,7 +9,6 @@
 
     "link": {
         "screenrc":      "~/.screenrc",
-        "gitconfig":     "~/.gitconfig",
         "inputrc":       "~/.inputrc",
         "taskrc":        "~/.taskrc",
         "Rprofile":      "~/.Rprofile",
