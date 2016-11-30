@@ -25,4 +25,5 @@ shopt -s histappend
 # it left to type your commands.  To solve this
 # I use a two line prompt.
 export PS1="\t \u@\h\\$ {\$?} \w\n$ \[$(tput sgr0)\]"
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 

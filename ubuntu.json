@@ -15,7 +15,6 @@
         "screenrc":      "~/.screenrc",
         "i3status.conf": "~/.i3status.conf",
         "i3config":      "~/.i3/config",
-        "gitconfig":     "~/.gitconfig",
         "xinitrc":       "~/.xinitrc",
         "inputrc":       "~/.inputrc",
         "gdbinit":       "~/.gdbinit",
