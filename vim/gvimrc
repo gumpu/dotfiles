@@ -23,19 +23,21 @@ set guicursor+=a:blinkon0
 
 "=============================================
 " I never use the toolbar. 
-set go-=T
+" set go-=T
 " Once in a while I use the menubar
-set go-=m
+" set go-=m
 " No Beep!!! Who ever thought this was a good idea??
 set vb t_vb=""
 
 " It is wise not to set a font but use the default instead.  The
 " selected font might not be available on the system vim is being
 " installed on.
-set guifont=Monospace\ 14
-"set guifont=Droid\ Sans\ Mono\ 8
-"set guifont=Droid\ Sans\ Mono\ 10
+" set guifont=Monospace\ 14
+" set guifont=Droid\ Sans\ Mono\ 8
+" set guifont=Droid\ Sans\ Mono\ 10
 "set guifont=Droid\ Sans\ Mono\ 16
+set guifont=Inconsolata\ Medium\ 16
+
 "---------------------------------------------------------------------
 " Font work better in gvim, so lets use some nice unicode.
 " set listchars=tab:»˽,trail:˽,eol:¶

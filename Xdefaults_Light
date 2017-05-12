@@ -1,5 +1,6 @@
 ! *.font:xft:Droid Sans Mono:pixelsize=10:antialias=true
 
+!!--- the light version -------------------
 #define S_base03        #002b36
 #define S_base02        #073642
 #define S_base01        #586e75
@@ -9,12 +10,12 @@
 #define S_base2         #eee8d5
 #define S_base3         #fdf6e3
 
-*background:            S_base03
-*foreground:            S_base0
-*fadeColor:             S_base03
-*cursorColor:           S_base1
-*pointerColorBackground:S_base01
-*pointerColorForeground:S_base1
+*background:            S_base3
+*foreground:            S_base00
+*fadeColor:             S_base3
+*cursorColor:           S_base01
+*pointerColorBackground:S_base1
+*pointerColorForeground:S_base01
 
 #define S_yellow        #b58900
 #define S_orange        #cb4b16
@@ -57,66 +58,7 @@
 *color7:                S_base2
 *color15:               S_base3
 
-
-!!--- the light version -------------------
-!LI #define S_base03        #002b36
-!LI #define S_base02        #073642
-!LI #define S_base01        #586e75
-!LI #define S_base00        #657b83
-!LI #define S_base0         #839496
-!LI #define S_base1         #93a1a1
-!LI #define S_base2         #eee8d5
-!LI #define S_base3         #fdf6e3
-!LI 
-!LI *background:            S_base3
-!LI *foreground:            S_base00
-!LI *fadeColor:             S_base3
-!LI *cursorColor:           S_base01
-!LI *pointerColorBackground:S_base1
-!LI *pointerColorForeground:S_base01
-!LI 
-!LI #define S_yellow        #b58900
-!LI #define S_orange        #cb4b16
-!LI #define S_red           #dc322f
-!LI #define S_magenta       #d33682
-!LI #define S_violet        #6c71c4
-!LI #define S_blue          #268bd2
-!LI #define S_cyan          #2aa198
-!LI #define S_green         #859900
-!LI 
-!LI !! black dark/light
-!LI *color0:                S_base02
-!LI *color8:                S_base03
-!LI 
-!LI !! red dark/light
-!LI *color1:                S_red
-!LI *color9:                S_orange
-!LI 
-!LI !! green dark/light
-!LI *color2:                S_green
-!LI *color10:               S_base01
-!LI 
-!LI !! yellow dark/light
-!LI *color3:                S_yellow
-!LI *color11:               S_base00
-!LI 
-!LI !! blue dark/light
-!LI *color4:                S_blue
-!LI *color12:               S_base0
-!LI 
-!LI !! magenta dark/light
-!LI *color5:                S_magenta
-!LI *color13:               S_violet
-!LI 
-!LI !! cyan dark/light
-!LI *color6:                S_cyan
-!LI *color14:               S_base1
-!LI 
-!LI !! white dark/light
-!LI *color7:                S_base2
-!LI *color15:               S_base3
-!LI 
-
+! =====================================================
 Xcursor.size:   16
 Xcursor.theme:  whiteglass
 Xcursor.theme_core: true

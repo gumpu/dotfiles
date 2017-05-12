@@ -20,6 +20,9 @@ set encoding=utf-8
 " map <Up>    <Nop>
 " map <Down>  <Nop>
 
+map <S-PageUp> <NOP>
+map <S-PageDown> <NOP>
+
 "=========================================================================
 filetype plugin on
 filetype indent on
@@ -61,7 +64,7 @@ set so=15
 "=======================================================
 " This only works if you did a:
 "   export FAST=1
-" on you shell before stating vim.
+" on your shell before stating vim.
 " Reason is that this is bandwidth intensive.
 if $FAST
 " Highlight the line the cursor is on.
@@ -80,9 +83,11 @@ endif
 " .=Current buffer, w=other windows, b=other loader buffers,
 " t=tag completion, i=included files,kspell=current active spell checking
 set complete=.,w,b,u,t,i,kspell
+
 " This is a bad idea, some files are really not suited for spell checking.
 " set spell
 set nospell
+
 " And I usuall write in English
 set spelllang=en
 
@@ -169,12 +174,10 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeHijackNetrw=1
 "
 "==========================================================================
-"
 
 " For the super handy vim-localvimrc plugin
 " <https://github.com/embear/vim-localvimrc>
 let g:localvimrc_whitelist='/home/frans/Documents/.*'
-
 
 "==========================================================================
 "
