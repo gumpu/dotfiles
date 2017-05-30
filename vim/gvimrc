@@ -15,8 +15,8 @@ set mousemodel=popup_setpos
 set relativenumber
 "=============================================
 "background:  Are we using a "light" or "dark" background?
-"set background=light
-set background=dark
+set background=light
+" set background=dark
 colorscheme solarized
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 set guicursor+=a:blinkon0

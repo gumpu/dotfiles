@@ -42,11 +42,17 @@ syntax enable
 set t_Co=256
 " set background=dark
 set background=light
-" colorscheme solarized
+colorscheme solarized
 
 "=========================================================================
 " Switch on search pattern highlighting
 set hlsearch
+
+" For some reason other colors than these
+" show up as gray...
+hi Search cterm=NONE ctermfg=red ctermbg=black
+
+"
 " Briefly show a matching brace.
 set showmatch
 " Use the  vi:noai:sw=3. The line found at the end or begin of a file.

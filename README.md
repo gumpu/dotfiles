@@ -1,7 +1,7 @@
 # Dot Files
 
-This is my collection of configuration files (dotfiles). It also includes
-tools to install them in the correct place. I have tried to document why I
+This is my collection of configuration files (dotfiles). It also includes a
+tool to install them in the correct place. I have tried to document why I
 chose each setting. Maybe it is of use to someone else too.
 
 ## Context
