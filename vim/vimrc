@@ -14,7 +14,7 @@ set encoding=utf-8
 "=========================================================================
 " Remove cursor keys, they slow you down.
 " Tried this, but it conflicts with most other applications and
-" confuse you fingers in the end.
+" confuse your fingers in the end.
 " map <Left>  <Nop>
 " map <Right> <Nop>
 " map <Up>    <Nop>
@@ -31,8 +31,8 @@ filetype indent on
 set showbreak=↪
 
 "=========================================================================
-" No utterly annoying beep!!!! What moron did think beeping was a
-" good idea!
+" No utterly annoying beep!!!! What moron did think beeping for every
+" mistake was a good idea!
 set vb t_vb=""
 
 "=========================================================================
@@ -40,6 +40,7 @@ set vb t_vb=""
 syntax enable
 " Use 256 colours
 set t_Co=256
+" Ideally this would change automatically based on the amount of ambient light
 " set background=dark
 set background=light
 colorscheme solarized
@@ -66,7 +67,7 @@ set sw=4
 set backspace=indent,eol,start
 
 " We want to see at least ten lines above and below the cursor.
-set so=15
+set so=10
 "
 "=======================================================
 " This only works if you did a:
@@ -92,13 +93,17 @@ endif
 set complete=.,w,b,u,t,i,kspell
 
 " This is a bad idea, some files are really not suited for spell checking.
-" set spell
+"
+"   set spell.
+"
+" Better to add this to .lvimrc in the directory of the files
+" you want to have spell-checked.
 set nospell
 
-" And I usuall write in English
+" And I usually write in English
 set spelllang=en
 
-" Seach for tags in tags file and look for it up
+" Search for tags in tags file and look for it up
 " in the directory tree too.
 set tags=tags;
 
@@ -155,22 +160,22 @@ let vimrplugin_vsplit = 0
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-
 " unicode symbols for the status bar.
-let g:airline_left_sep = '»'
+" let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
+" let g:airline_right_sep = '«'
 let g:airline_right_sep = '◀'
 let g:airline_symbols.linenr = '␊'
 let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
+" let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
+" let g:airline_symbols.paste = 'Þ'
+" let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
-
 let g:airline#extensions#virtualenv#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+
 "==========================================================================
 " NERDTree
 "
@@ -197,3 +202,11 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+"==========================================================================
+" Nvim-R
+"
+" Do not turn _ into a <-
+
+let R_assign = 0
+
+" vi: spell spl=en

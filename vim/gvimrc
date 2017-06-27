@@ -23,7 +23,7 @@ set guicursor+=a:blinkon0
 
 "=============================================
 " I never use the toolbar. 
-" set go-=T
+set go-=T
 " Once in a while I use the menubar
 " set go-=m
 " No Beep!!! Who ever thought this was a good idea??
