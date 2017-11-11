@@ -129,7 +129,7 @@ Xft.hintstyle:  hintfull
 URxvt.buffered:       true
 URxvt.cursorBlink:    true
 !URxvt.font:             xft:inconsolata:pixelsize=12
-*.font:             xft:inconsolata:pixelsize=22
+*.font:             xft:inconsolata:pixelsize=12
 !*.font:xft:Droid Sans Mono:pixelsize=11:antialias=true
 !*.font:xft:Monofur:pixelsize=14:antialias=true
 !URxvt*font:           -misc-fixed-medium-r-semicondensed-*-12-90-100-*-c-60-iso8859-1

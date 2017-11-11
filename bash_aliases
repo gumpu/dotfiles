@@ -26,7 +26,11 @@ shopt -s histappend
 export PS1="\t \u@\h\\$ {\$?} \w\n$ \[$(tput sgr0)\]"
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
+# To get rid of ' WARNING **: Couldn't connect to accessibility bus: '
+# emitted by InkScape that break a makefile build
+export NO_AT_BRIDGE=1
 
+# --
 export OTIS_HOME=/home/frans/Sandbox/Source
 export PYTHONPATH=$OTIS_HOME/:$OTIS_HOME/lib/:
 export OTIS_LOGGING=/home/frans/Logging

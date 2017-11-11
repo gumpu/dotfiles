@@ -13,8 +13,8 @@ Helptags
 set encoding=utf-8
 "=========================================================================
 " Remove cursor keys, they slow you down.
-" Tried this, but it conflicts with most other applications and
-" confuse your fingers in the end.
+" Tried this but it conflicts with most other applications and
+" confuses my fingers in the end.
 " map <Left>  <Nop>
 " map <Right> <Nop>
 " map <Up>    <Nop>
@@ -29,7 +29,7 @@ filetype indent on
 
 "=========================================================================
 set showbreak=↪
-
+set number
 "=========================================================================
 " No utterly annoying beep!!!! What moron did think beeping for every
 " mistake was a good idea!
@@ -49,11 +49,10 @@ colorscheme solarized
 " Switch on search pattern highlighting
 set hlsearch
 
-" For some reason other colors than these
-" show up as gray...
+" For some reason other colors than these show up as gray...
 hi Search cterm=NONE ctermfg=red ctermbg=black
 
-"
+"=========================================================================
 " Briefly show a matching brace.
 set showmatch
 " Use the  vi:noai:sw=3. The line found at the end or begin of a file.
@@ -68,7 +67,7 @@ set backspace=indent,eol,start
 
 " We want to see at least ten lines above and below the cursor.
 set so=10
-"
+
 "=======================================================
 " This only works if you did a:
 "   export FAST=1
@@ -155,6 +154,9 @@ let r_syntax_folding = 0
 " and the R console on the otherside.
 let vimrplugin_vsplit = 0
 
+"===================== VIM NVIM-R Plugin =======================================
+let R_term="urxvt"
+
 "==========================================================================
 " Airline
 if !exists('g:airline_symbols')
@@ -178,29 +180,32 @@ let g:airline#extensions#tabline#enabled = 1
 
 "==========================================================================
 " NERDTree
-"
 " Short-cut to toggle NERDTree window
 
 map <C-n> :NERDTreeToggle<CR>
 " Replace  :e .
 let NERDTreeHijackNetrw=1
-"
-"==========================================================================
 
+"==========================================================================
 " For the super handy vim-localvimrc plugin
 " <https://github.com/embear/vim-localvimrc>
 let g:localvimrc_whitelist='/home/frans/Documents/.*'
 
 "==========================================================================
 "
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "active_filetypes": ["python"],
+    \ "passive_filetypes": ["c"] }
 
 "==========================================================================
 " Nvim-R
