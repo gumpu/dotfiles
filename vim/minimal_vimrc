@@ -57,11 +57,11 @@ endif
 "=======================================================
 " Completion options
 " .=Current buffer, w=other windows, b=other loader buffers,
-" t=tag completion, i=included files,kspell=current active spell checking
+" t=tag completion, i=included files, kspell=current active spell checking
 set complete=.,w,b,u,t,i
 
-" Seach for tags in tags file and look for it up
-" in the directory tree too.
+" Search for tags in the tags file and look for this file
+" in the current directory and up the directory tree too.
 set tags=tags;
 
 "=============== V I M I N F O =========================

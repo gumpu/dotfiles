@@ -13,7 +13,7 @@ map! <S-Insert> <MiddleMouse>
 set mousehide
 set mousemodel=popup_setpos
 
-set number
+" set number
 " set relativenumber
 "=============================================
 "background:  Are we using a "light" or "dark" background?

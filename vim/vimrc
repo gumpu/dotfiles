@@ -3,7 +3,7 @@
 "
 " This should always be first.
 " pathogen is very handy. Allows you to add and more important
-" remove plugings with ease.
+" remove plugins with ease.
 "
 execute pathogen#infect()
 " Enable Vim features.
@@ -129,6 +129,11 @@ set expandtab
 "      'textwidth' when the insert command started, Vim does not
 "      automatically format it.
 set formatoptions=qrtcl
+"
+"======== Compiling Code ======================================
+
+nnoremap <F2> :copen<CR>
+nnoremap <F5> :make!<CR>
 
 "======================== STATUS LINE ============================
 " Make command line one line high.
@@ -139,7 +144,7 @@ set noruler
 set laststatus=2
 
 "==========================================================================
-" Show spaces and tabs... very handy
+" Show spaces and tabs, very handy
 set list
 set listchars=tab:>.,trail:.
 
@@ -151,7 +156,7 @@ let vimrplugin_map_r = 1
 " We love folding, also in R.
 let r_syntax_folding = 0
 " Set to 1 to do a vertical split. So we have vim on one side
-" and the R console on the otherside.
+" and the R console on the other side.
 let vimrplugin_vsplit = 0
 
 "===================== VIM NVIM-R Plugin =======================================

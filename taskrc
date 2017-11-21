@@ -8,23 +8,14 @@
 #   variable=      -- By specifying no value, this means no default
 #   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
 
-calendar.holidays=full
-calendar.details=full
+# calendar.holidays=full
+# calendar.details=full
 due=5
 editor=vim
-#dateformat=Ymd
-#include /usr/share/doc/task/rc/holidays.nl-NL.rc
+
+# include /usr/share/taskwarrior/holidays.nl-NL.rc  (Outdated)
 # Color theme (uncomment one to use)
-#include /usr/share/doc/task/rc/light-16.theme
-#include /usr/share/doc/task/rc/light-256.theme
-#include /usr/share/doc/task/rc/dark-16.theme
-#include /usr/share/doc/task/rc/dark-256.theme
-#include /usr/share/doc/task/rc/dark-red-256.theme
-#include /usr/share/doc/task/rc/dark-green-256.theme
-#include /usr/share/doc/task/rc/dark-blue-256.theme
-#include /usr/share/doc/task/rc/dark-violets-256.theme
-#include /usr/share/doc/task/rc/dark-yellow-green.theme
-#include /usr/share/doc/task/rc/dark-gray-256.theme
+include /usr/share/taskwarrior/light-256.theme
 
 # Use the command 'task show' to see all defaults and overrides
 dateformat=Y-m-d
