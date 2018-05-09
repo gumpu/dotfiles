@@ -37,8 +37,10 @@ set vb t_vb=""
 " set guifont=Monospace\ 14
 " set guifont=Droid\ Sans\ Mono\ 8
 " set guifont=Droid\ Sans\ Mono\ 10
-"set guifont=Droid\ Sans\ Mono\ 16
-set guifont=Inconsolata\ Medium\ 16
+" set guifont=Droid\ Sans\ Mono\ 16
+" set guifont=ProggyCleanTT\ 12
+
+set guifont=Inconsolata\ Medium\ 13
 
 "---------------------------------------------------------------------
 " Font work better in gvim, so lets use some nice unicode.

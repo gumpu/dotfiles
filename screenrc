@@ -28,3 +28,7 @@ defscrollback 4096
 bind  s
 vbell off
 
+screen -t Source bash
+screen -t Build bash
+screen -t Debug bash
+# ============================================================================

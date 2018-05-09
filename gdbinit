@@ -11,4 +11,5 @@ set $64BITS = 1
 
 set confirm off
 set verbose off
-set prompt \033[31mgdb$ \033[0m
+# Does not work with gdb -tui
+# set prompt \033[31mgdb$ \033[0m
