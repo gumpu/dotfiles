@@ -46,3 +46,7 @@ export PATH="$PATH:/home/frans/Documents/Personal/Coursera/Optimization/MiniZinc
 export PATH="$PATH:/opt/arm/gcc-arm-none-eabi-6-2017-q2-update/bin/"
 
 # ============================================================================
+
+export SPIN_LOGGING=~/Logging
+
+# ============================================================================

@@ -76,7 +76,7 @@ bindsym $mod+6 workspace 6 docs
 bindsym $mod+7 workspace 7 docs
 bindsym $mod+8 workspace 8 log
 bindsym $mod+9 workspace 9 www
-bindsym $mod+0 workspace 10 www
+bindsym $mod+0 workspace 10 spotify
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1 temp
@@ -88,7 +88,7 @@ bindsym $mod+Shift+6 move container to workspace 6 docs
 bindsym $mod+Shift+7 move container to workspace 7 docs
 bindsym $mod+Shift+8 move container to workspace 8 log
 bindsym $mod+Shift+9 move container to workspace 9 www
-bindsym $mod+Shift+0 move container to workspace 10 www
+bindsym $mod+Shift+0 move container to workspace 10 spotify
 
 #
 bindsym XF86AudioRaiseVolume exec amixer -c 0 -- sset Master playback 1dB+
@@ -103,6 +103,9 @@ bindsym XF86AudioLowerVolume exec amixer -c 0 -- sset Master playback 1dB-
 # Set background
 # exec --no-startup-id feh --bg-max /home/frans/Documents/Backgrounds/miniminimini2.png
 exec --no-startup-id sh ~/.fehbg
+
+
+# exec compton -f -b
 
 # Remove mouse pointer when not using the mouse....
 # This leads to a blinking mouse pointer.
@@ -124,6 +127,8 @@ for_window [class="feh"]       floating enable
 # Move window to scratchpad...   handy for spotify
 bindsym $mod+m move scratchpad
 bindsym $mod+o scratchpad show
+
+new_window pixel 1
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

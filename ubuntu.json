@@ -27,10 +27,8 @@
         "vim/vimrc":     "~/.vimrc",
         "vim/gvimrc":    "~/.gvimrc",
         "craftyrc":      "~/.craftyrc",
-        "tigrc":         "~/.tigrc"
-    },
-
-    "copy": {
+        "tigrc":         "~/.tigrc",
+        "vim/snippets":  "~/.vim/snippets",
         "vim/autoload/pathogen.vim": "~/.vim/autoload/pathogen.vim",
         "vim/get_plugins.sh": "~/.vim/bundle/get_plugins.sh"
     },

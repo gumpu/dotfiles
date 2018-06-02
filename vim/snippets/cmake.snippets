@@ -1,0 +1,29 @@
+snippet init
+	# We set all sources explicitly. We do not use "glob".
+	# We do not want any extra code or code that is not rebuild.
+	set(SOURCES main.c)
+	# What are we trying to build
+	add_executable(main ${SOURCES})
+
+	# In which directories can we find the includes for this target.
+	target_include_directories(main PRIVATE
+	    dir
+	)
+
+	# Add submodules
+	# add_subdirectory(output_handler)
+	# add_subdirectory(safetymeasures)
+
+	# What libaries are needed
+	# target_link_labraries(main lib lib)
+
+	# What libaries are needed based on the target
+	# if(xxxx)
+	#     target_link_labraries(main lib lib)
+	# else()
+	#     target_link_labraries(main lib lib)
+	# endif()
+	# ------------------------- end of file -------------------------------------
+
+snippet end
+	# ------------------------- end of file -------------------------------------

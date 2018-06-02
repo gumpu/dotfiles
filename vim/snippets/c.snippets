@@ -1,0 +1,26 @@
+snippet for
+	for(i = 0; i < ${0}; i++) {
+	    /* code */
+	}
+
+snippet main
+	int main(int argc, char** argv)
+	{
+		return EXIT_SUCCESS;
+	}
+
+snippet hg
+	#ifndef HG_`toupper(Filename())`_H
+	#define HG_`toupper(Filename())`_H
+	${0}
+	#endif /* HG_`toupper(Filename())`_H */
+
+snippet end
+	/* ------------------------ end of file -------------------------------*/
+
+snippet fileheader
+	/**
+	 * @file `Filename()`
+	 * @brief ${0}
+	 */
+

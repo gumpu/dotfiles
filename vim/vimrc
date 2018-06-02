@@ -1,16 +1,21 @@
+" vi: fdm=marker foldenable
 "
 " Frans Slothouber
 "
+
 " This should always be first.
 " pathogen is very handy. Allows you to add and more important
 " remove plugins with ease.
-"
 execute pathogen#infect()
+"==== Bare Minimum =======================================================
+" {{{
 " Enable Vim features.
 set nocompatible
 Helptags
+filetype plugin on
+filetype indent on
+" }}}
 
-set encoding=utf-8
 "=========================================================================
 " Remove cursor keys, they slow you down.
 " Tried this but it conflicts with most other applications and
@@ -24,18 +29,14 @@ map <S-PageUp> <NOP>
 map <S-PageDown> <NOP>
 
 "=========================================================================
-filetype plugin on
-filetype indent on
-
-"=========================================================================
+"==== Look and Feel ===============================================
+" {{{
+set encoding=utf-8
 set showbreak=↪
 set number
-"=========================================================================
 " No utterly annoying beep!!!! What moron did think beeping for every
 " mistake was a good idea!
 set vb t_vb=""
-
-"=========================================================================
 " Switch on syntax highlighting.
 syntax enable
 " Use 256 colours
@@ -44,18 +45,18 @@ set t_Co=256
 " set background=dark
 set background=light
 colorscheme solarized
-
-"=========================================================================
-" Switch on search pattern highlighting
-set hlsearch
-
 " For some reason other colors than these show up as gray...
 hi Search cterm=NONE ctermfg=red ctermbg=black
-
-"=========================================================================
+"
+" Folding
+set foldmethod=indent
+" Show spaces and tabs, very handy
+"set listchars=tab:>.,trail:.
+set listchars=tab:↠.,trail:⌀
+set list
 " Briefly show a matching brace.
 set showmatch
-" Use the  vi:noai:sw=3. The line found at the end or begin of a file.
+" Use the  'vi:noai:sw=3' lines found at the end or begin of a file.
 set modeline
 " Auto-wrap after 78 characters.
 set textwidth=78
@@ -64,11 +65,19 @@ set ts=4
 set sw=4
 " Allow backspacing over everything in insert mode.
 set backspace=indent,eol,start
-
 " We want to see at least ten lines above and below the cursor.
 set so=10
+" }}}
 
-"=======================================================
+"==== Search ======================================================
+" {{{
+" Switch on search pattern highlighting
+set hlsearch
+set path=**
+" }}}
+
+"==== Fancy Look and Feel =========================================
+" {{{
 " This only works if you did a:
 "   export FAST=1
 " on your shell before stating vim.
@@ -78,19 +87,27 @@ if $FAST
 " Not advisable for slow connections.
 set cursorline
 " Make the line numbers relative to the current line
-" This makes is real reasy to jump to the right line
+" This makes is real easy to jump to the right line
 " with   k and j   (i.e.  5j 12j 3k etc)
 " Also not advisable for slow connections.
 set relativenumber
 endif
-"=======================================================
+" }}}
 
 "=======================================================
 " Completion options
+" {{{
 " .=Current buffer, w=other windows, b=other loader buffers,
 " t=tag completion, i=included files,kspell=current active spell checking
 set complete=.,w,b,u,t,i,kspell
 
+" Search for tags in tags file and look for it up
+" in the directory tree too.
+set tags=tags;
+" }}}
+
+"======== SPELLING ========================================
+" {{{
 " This is a bad idea, some files are really not suited for spell checking.
 "
 "   set spell.
@@ -101,12 +118,10 @@ set nospell
 
 " And I usually write in English
 set spelllang=en
+" }}}
 
-" Search for tags in tags file and look for it up
-" in the directory tree too.
-set tags=tags;
-
-"=============== V I M I N F O =========================
+"======== VIMINFO =========================================
+" {{{
 " read/write a .viminfo file,
 " (1) don't store more than 500 lines of registers
 " (2) remember the buffer list of the previous session.
@@ -119,8 +134,10 @@ set history=500
 set magic
 " Expand tabs to spaces, tabs are EVIL!
 set expandtab
+" }}}
 
 "======== Formatting ======================================
+" {{{
 " t -- Auto-wrap text.
 " c -- Auto-wrap comments.
 " r -- Automatically insert the current comment leader.
@@ -129,26 +146,26 @@ set expandtab
 "      'textwidth' when the insert command started, Vim does not
 "      automatically format it.
 set formatoptions=qrtcl
-"
-"======== Compiling Code ======================================
+" }}}
 
+"======== Compiling Code ==================================
+" {{{
 nnoremap <F2> :copen<CR>
 nnoremap <F5> :make!<CR>
+" }}}
 
-"======================== STATUS LINE ============================
+"======================== STATUS LINE =====================
+" {{{
 " Make command line one line high.
 set ch=1
 " Handled by airline
 set noruler
 " Always show a status line.
 set laststatus=2
-
-"==========================================================================
-" Show spaces and tabs, very handy
-set list
-set listchars=tab:>.,trail:.
+" }}}
 
 "===================== VIM R Plugin =======================================
+" {{{
 " Do _not_ replace _ with <-
 let vimrplugin_assign = 0
 " Send visually selected lines to R
@@ -158,16 +175,17 @@ let r_syntax_folding = 0
 " Set to 1 to do a vertical split. So we have vim on one side
 " and the R console on the other side.
 let vimrplugin_vsplit = 0
+" }}}
 
 "===================== VIM NVIM-R Plugin ==================================
 let R_term="urxvt"
-
 
 "===================== remove spaces at the end of a line =================
 autocmd BufWritePre * %s/\s\+$//e
 
 "==========================================================================
 " Airline
+" {{{
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
@@ -185,8 +203,9 @@ let g:airline_symbols.paste = 'ρ'
 " let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 let g:airline#extensions#virtualenv#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 let g:airline_theme='sol'
+" }}}
 
 "==========================================================================
 " JEDI
@@ -195,17 +214,21 @@ let g:airline_theme='sol'
 " let g:jedi#completions_enabled 0
 
 "==========================================================================
+" Is usefull but trying netrw
 " NERDTree
+" {{{
 " Short-cut to toggle NERDTree window
-
-map <C-n> :NERDTreeToggle<CR>
+" map <C-n> :NERDTreeToggle<CR>
 " Replace  :e .
-let NERDTreeHijackNetrw=1
+" let NERDTreeHijackNetrw=1
+" }}}
 
 "==========================================================================
 " For the super handy vim-localvimrc plugin
+" {{{
 " <https://github.com/embear/vim-localvimrc>
 let g:localvimrc_whitelist='/home/frans/Documents/.*'
+" }}}
 
 "==========================================================================
 "
@@ -225,12 +248,15 @@ let g:syntastic_mode_map = {
 
 "==========================================================================
 " Nvim-R
-"
+" {{{
 " Do not turn _ into a <-
-
 let R_assign = 0
-
+" }}}
 
 "==========================================================================
+" SnipMate
+" {{{
 
+" }}}
+"==========================================================================
 " vi: spell spl=en
