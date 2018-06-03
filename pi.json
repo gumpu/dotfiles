@@ -10,13 +10,13 @@
     "link": {
         "screenrc":      "~/.screenrc",
         "inputrc":       "~/.inputrc",
+        "gdbinit":       "~/.gdbinit",
         "taskrc":        "~/.taskrc",
         "Rprofile":      "~/.Rprofile",
         "tmux.conf":     "~/.tmux.conf",
-        "vim/vimrc":     "~/.vimrc"
-    },
-
-    "copy": {
+        "vim/vimrc":     "~/.vimrc",
+        "tigrc":         "~/.tigrc",
+        "vim/snippets":  "~/.vim/snippets",
         "vim/autoload/pathogen.vim": "~/.vim/autoload/pathogen.vim",
         "vim/get_plugins.sh": "~/.vim/bundle/get_plugins.sh"
     },
