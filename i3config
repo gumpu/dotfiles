@@ -121,7 +121,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # floating_maximum_size 400 x 300
 for_window [class="Spotify"]   floating enable
 for_window [class="Minecraft"] floating enable
-for_window [class="feh"]       floating enable
+# for_window [class="feh"]       floating enable
 # Does not work for_window [class="gitk*"] floating enable
 
 # Move window to scratchpad...   handy for spotify
