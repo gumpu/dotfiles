@@ -21,7 +21,9 @@
 --ignore-directory=is:build_x86
 --ignore-directory=is:build_hercules
 --ignore-directory=is:build_tiva
-
+--ignore-directory=is:configuration
+--ignore-directory=is:docs
+--ignore-file=is:tags
 
 # Bazaar
 # http://bazaar.canonical.com/
