@@ -1,65 +1,92 @@
-# vi: ft=i3
+# vi: ft=i3config
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-client.focused          #3F8AC2 #096BAA #00BAA7 #00DA8E
-client.focused_inactive #333333 #5F676A #ffffff #484e50
-client.unfocused        #333333 #424242 #888888 #292d2e
-client.urgent           #C10004 #900000 #ffffff #900000
+
+# Solarized
+set $base03    #002b36
+set $base02    #073642
+set $base01    #586e75
+set $base00    #657b83
+set $base0     #839496
+set $base1     #93a1a1
+set $base2     #eee8d5
+set $base3     #fdf6e3
+set $yellow    #b58900
+set $orange    #cb4b16
+set $red       #dc322f
+set $magenta   #d33682
+set $violet    #6c71c4
+set $blue      #268bd2
+set $cyan      #2aa198
+set $green     #859900
+
+#                       Border  Background Text    Indication Child_Border
+client.focused          $green  $base00    $base3  $green     $green
+client.focused_inactive $green  $base02    $base3  $blue      $base03
+client.unfocused        $base01 $base01    $base0  $violet    $base03
+client.urgent           $base03 $red       $base1  #900000    $red
+client.background       #000000
 
 # A good use for the windows key
 set $mod Mod4
 
-# Font for window titles. Will also be used by the bar unless a different font
+gaps inner 5
+gaps outer 25
+
+#workspace 9 gaps inner 1
+#workspace 9 gaps outer 1
+#workspace 3 gaps inner 5
+#workspace 3 gaps outer 25
+
+#gaps horizontal 15
+#gaps vertical 15
+#gaps top 5
+#gaps bottom 5
+#gaps left 5
+#gaps right 5
+
+# Font for window titles.
+# Will also be used by the bar unless a different font is chosen there
 font xft:Droid Sans Mono 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvt +sb
-bindsym $mod+Shift+Return exec urxvt +sb -fn xft:inconsolata:pixelsize=14
+bindsym $mod+Return exec /home/frans/bin/st
+bindsym $mod+Shift+Return exec /home/frans/bin/st2
+# bindsym $mod+Shift+Return exec urxvt +sb -fn xft:inconsolata:pixelsize=14
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
-
 # change focus (using vim logic)
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Left focus left
+bindsym $mod+Down  focus down
+bindsym $mod+Up    focus up
+bindsym $mod+Left  focus left
 bindsym $mod+Right focus right
-
 # Move window (using vim logic)
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Right move right
-
 # split in horizontal orientation
 bindsym $mod+h split h
-
 # split in vertical orientation
 bindsym $mod+v split v
-
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
-
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
-
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
-
 # focus the parent container
 bindsym $mod+a focus parent
 
@@ -77,6 +104,7 @@ bindsym $mod+7 workspace 7 docs
 bindsym $mod+8 workspace 8 log
 bindsym $mod+9 workspace 9 www
 bindsym $mod+0 workspace 10 spotify
+bindsym $mod+Tab workspace back_and_forth
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1 temp
@@ -96,14 +124,15 @@ bindsym XF86AudioLowerVolume exec amixer -c 0 -- sset Master playback 1dB-
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% && killall -SIGUSR1 i3status
 # bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% && killall -SIGUSR1 i3status
 
+assign [class="Spotify"] 10 spotify
+assign [class="Firefox"] 9 www
+
 #
 # Kill audio with no way to return....   TODO Fix
 # bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # Set background
-# exec --no-startup-id feh --bg-max /home/frans/Documents/Backgrounds/miniminimini2.png
 exec --no-startup-id sh ~/.fehbg
-
 
 # exec compton -f -b
 
@@ -121,7 +150,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # floating_maximum_size 400 x 300
 for_window [class="Spotify"]   floating enable
 for_window [class="Minecraft"] floating enable
-# for_window [class="feh"]       floating enable
+# for_window [class="feh"]     floating enable
 # Does not work for_window [class="gitk*"] floating enable
 
 # Move window to scratchpad...   handy for spotify
@@ -158,11 +187,50 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
-        tray_output LVDS
-        colors{
-                background #232323
-                statusline #DCDCDC
-        }
+    status_command i3status
+    tray_output primary
+    output eDP-1
+    colors {
+            background $base03
+            statusline $base0
+            separator  $base01
+#                              border  background text
+            inactive_workspace $base02 $base02    $base0
+            active_workspace   $blue   $base03    $base2
+            focused_workspace  $green  $base03    $base3
+            urgent_workspace   $red    $red       $base3
+    }
 }
-#
+
+bar {
+    status_command i3status --config ~/dotfiles/i3status_small.conf
+    output DP-2
+    colors {
+        background $base03
+            statusline $base0
+            separator  $base01
+#                              border  background text
+            inactive_workspace $base02 $base02    $base0
+            active_workspace   $blue   $base03    $base2
+            focused_workspace  $green  $base03    $base3
+            urgent_workspace   $red    $red       $base3
+    }
+}
+
+bar {
+    status_command i3status --config ~/dotfiles/i3status_small.conf
+    output HDMI-1
+    colors {
+        background $base03
+            statusline $base0
+            separator  $base01
+#                              border  background text
+            inactive_workspace $base02 $base02    $base0
+            active_workspace   $blue   $base03    $base2
+            focused_workspace  $green  $base03    $base3
+            urgent_workspace   $red    $red       $base3
+    }
+}
+
+
+# ============================================================================

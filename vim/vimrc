@@ -42,8 +42,8 @@ syntax enable
 " Use 256 colours
 set t_Co=256
 " Ideally this would change automatically based on the amount of ambient light
-" set background=dark
-set background=light
+set background=dark
+" set background=light
 colorscheme solarized
 " For some reason other colors than these show up as gray...
 hi Search cterm=NONE ctermfg=red ctermbg=black
@@ -67,6 +67,11 @@ set sw=4
 set backspace=indent,eol,start
 " We want to see at least ten lines above and below the cursor.
 set so=10
+" More space for the help window
+set helpheight=40
+" Do not highlight matching paren.
+" (Too distracting, and makes it hard to see " where the cursor is).
+let loaded_matchparen=1
 " }}}
 
 "==== Search ======================================================
@@ -123,11 +128,14 @@ set spelllang=en
 "======== VIMINFO =========================================
 " {{{
 " read/write a .viminfo file,
-" (1) don't store more than 500 lines of registers
-" (2) remember the buffer list of the previous session.
-"     to use this start gvim without a filename.
-" (3) Remember up-to 200 files.
-set viminfo='20,\"500,%
+" '20 remember mark for up to 20 files
+" \" don't store more than 500 lines of registers
+set viminfo='20,\"500
+" The % makes it remember the buffers from a previous setting,
+" but this is dangerous when you have multiple copies of a file in
+" different directories as you might end up editing the wrong file.
+" set viminfo='20,\"500,%
+
 " Keep 500 lines of command line history
 set history=500
 " Never switch this off as per manual.

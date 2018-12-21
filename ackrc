@@ -21,6 +21,8 @@
 --ignore-directory=is:build_x86
 --ignore-directory=is:build_hercules
 --ignore-directory=is:build_tiva
+--ignore-directory=is:build_pp
+--ignore-directory=is:build_fp
 --ignore-directory=is:configuration
 --ignore-directory=is:docs
 --ignore-file=is:tags

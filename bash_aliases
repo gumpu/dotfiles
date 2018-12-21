@@ -30,10 +30,13 @@ export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 export NO_AT_BRIDGE=1
 
 # --
-# export OTIS_HOME=/home/frans/Sandbox/Source
-# export PYTHONPATH=$OTIS_HOME/:$OTIS_HOME/lib/:
-# export OTIS_LOGGING=/home/frans/Logging
-# export OTIS_DB=$OTIS_LOGGING/otis.db
+export OTIS_HOME=/home/frans/Documents/InTraffic/NS_Git/nsr_kwarts/OTIS_V2/otis/Source
+# export OTIS_HOME=/home/frans/Documents/InTraffic/OTIS/otis/Source/
+export PYTHONPATH=$OTIS_HOME/:$OTIS_HOME/lib/:
+export OTIS_LOGGING=/home/frans/Logging
+export OBIS_ID=2700
+#export TRAIN_TYPE=CIVITY
+export TRAIN_TYPE=VIRM
 
 # For ESP32
 export PATH="$PATH:/home/frans/esp/crosstool-NG/builds/xtensa-esp32-elf/bin"

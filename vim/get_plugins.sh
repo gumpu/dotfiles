@@ -18,6 +18,7 @@ git clone https://github.com/jmcantrell/vim-virtualenv
 git clone https://github.com/mileszs/ack.vim.git
 git clone https://github.com/tpope/vim-fugitive.git
 git clone https://github.com/vim-scripts/taglist.vim.git
+git clone https://github.com/mboughaba/i3config.vim.git
 
 # ----------------------------------------------------------------------------
 # SnipMate. all three are needed
