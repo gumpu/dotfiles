@@ -9,10 +9,9 @@ startup_message off
 # terminfo and termcap for nice 256 color terminal
 # allow bold colors - necessary for some reason
 attrcolor b ".I"
-
 # tell screen how to set colors. AB = background, AF=foreground
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
-truecolor on
+truecolor  on
 altscreen  on
 hardstatus on
 hardstatus alwayslastline
@@ -26,10 +25,15 @@ defscrollback 4096
 
 # normally freezes parent, and is easily confused with ^a S
 bind  s
-
 vbell off
+# ---------------------------------------------------------
+screen -t Source bash  # 0
+screen -t Build  bash  # 1
+screen -t Debug  bash  # 2
+screen -t UT     bash  # 3
+screen -t TMP    bash  # 4
+screen -t PCDem  bash  # 5
+screen -t Spin   bash  # 6
 
-screen -t Source bash
-screen -t Build bash
-screen -t Debug bash
 # ============================================================================
+#
