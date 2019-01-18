@@ -11,11 +11,14 @@ startup_message off
 attrcolor b ".I"
 # tell screen how to set colors. AB = background, AF=foreground
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
 truecolor  on
+
 altscreen  on
 hardstatus on
 hardstatus alwayslastline
 hardstatus string "%= %3n %t%? [%h]%? %= %m/%d %C%a"
+
 caption    always
 caption    string "%= %-w%L>%{= BW}%n*%t%{-}%52<%+w %L="
 
@@ -27,13 +30,13 @@ defscrollback 4096
 bind  s
 vbell off
 # ---------------------------------------------------------
-screen -t Source bash  # 0
-screen -t Build  bash  # 1
-screen -t Debug  bash  # 2
-screen -t UT     bash  # 3
-screen -t TMP    bash  # 4
-screen -t PCDem  bash  # 5
-screen -t Spin   bash  # 6
+screen -t 源     fish  # 0
+screen -t 作る   fish  # 1
+screen -t 虫     fish  # 2
+screen -t 試験   fish  # 3
+screen -t TMP    fish  # 4
+screen -t PCDem  fish  # 5
+screen -t Spin   fish  # 6
+screen -t 魚     fish  # 6
 
 # ============================================================================
-#
