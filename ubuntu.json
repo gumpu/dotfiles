@@ -6,6 +6,7 @@
         "~/.vim/autoload",
         "~/.vim/spell",
         "~/.i3",
+        "~/.config/fish",
         "~/.crafty",
         "~/.crafty/books",
         "~/.crafty/logs"
@@ -31,7 +32,9 @@
         "ackrc":         "~/.ackrc",
         "vim/snippets":  "~/.vim/snippets",
         "vim/autoload/pathogen.vim": "~/.vim/autoload/pathogen.vim",
-        "vim/get_plugins.sh": "~/.vim/bundle/get_plugins.sh"
+        "vim/get_plugins.sh": "~/.vim/bundle/get_plugins.sh",
+        "fish/config.fish": "~/.config/fish/config.fish",
+        "fish/workon_funcs.fish": "~/.config/fish/workon_funcs.fish"
     },
 
     "commands": ["echo hello world"]

@@ -55,8 +55,8 @@ font xft:Droid Sans Mono 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec /home/frans/bin/st
-bindsym $mod+Shift+Return exec /home/frans/bin/st2
+bindsym $mod+Return exec /usr/local/bin/st
+# bindsym $mod+Shift+Return exec /home/frans/bin/st2
 # bindsym $mod+Shift+Return exec urxvt +sb -fn xft:inconsolata:pixelsize=14
 
 # kill focused window
@@ -95,26 +95,26 @@ bindsym $mod+a focus parent
 
 # switch to workspace
 bindsym $mod+1 workspace 1 temp
-bindsym $mod+2 workspace 2 debug
-bindsym $mod+3 workspace 3 code
-bindsym $mod+4 workspace 4 code
-bindsym $mod+5 workspace 5 code
-bindsym $mod+6 workspace 6 docs
-bindsym $mod+7 workspace 7 docs
-bindsym $mod+8 workspace 8 log
+bindsym $mod+2 workspace 2 虫
+bindsym $mod+3 workspace 3 源
+bindsym $mod+4 workspace 4 源
+bindsym $mod+5 workspace 5 源
+bindsym $mod+6 workspace 6 本
+bindsym $mod+7 workspace 7 本
+bindsym $mod+8 workspace 8 ログ
 bindsym $mod+9 workspace 9 www
 bindsym $mod+0 workspace 10 spotify
 bindsym $mod+Tab workspace back_and_forth
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1 temp
-bindsym $mod+Shift+2 move container to workspace 2 debug
-bindsym $mod+Shift+3 move container to workspace 3 code
-bindsym $mod+Shift+4 move container to workspace 4 code
-bindsym $mod+Shift+5 move container to workspace 5 code
-bindsym $mod+Shift+6 move container to workspace 6 docs
-bindsym $mod+Shift+7 move container to workspace 7 docs
-bindsym $mod+Shift+8 move container to workspace 8 log
+bindsym $mod+Shift+2 move container to workspace 2 虫
+bindsym $mod+Shift+3 move container to workspace 3 源
+bindsym $mod+Shift+4 move container to workspace 4 源
+bindsym $mod+Shift+5 move container to workspace 5 源
+bindsym $mod+Shift+6 move container to workspace 6 本
+bindsym $mod+Shift+7 move container to workspace 7 本
+bindsym $mod+Shift+8 move container to workspace 8 ログ
 bindsym $mod+Shift+9 move container to workspace 9 www
 bindsym $mod+Shift+0 move container to workspace 10 spotify
 
@@ -127,7 +127,6 @@ bindsym XF86AudioLowerVolume exec amixer -c 0 -- sset Master playback 1dB-
 assign [class="Spotify"] 10 spotify
 assign [class="Firefox"] 9 www
 
-#
 # Kill audio with no way to return....   TODO Fix
 # bindsym XF86AudioMute exec amixer -q set Master toggle
 

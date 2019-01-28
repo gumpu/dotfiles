@@ -53,3 +53,9 @@ export PATH="$PATH:/opt/arm/gcc-arm-none-eabi-6-2017-q2-update/bin/"
 export SPIN_LOGGING=~/Logging
 
 # ============================================================================
+
+# Takes care of
+# ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be
+# preloaded (cannot open shared object file): ignored.
+#export LD_PRELOAD=""
+

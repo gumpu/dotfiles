@@ -18,6 +18,9 @@ snippet hg
 	${0}
 	#endif /* HG_`toupper(Filename())`_H */
 
+snippet line
+	/* --------------------------------------------------------------------*/
+
 snippet end
 	/* ------------------------ end of file -------------------------------*/
 
@@ -33,7 +36,24 @@ snippet funheader
 	 *
 	 * @param[in] xxx yyy
 	 * @param[out] xxx yyy
-	 * @returns yyy
+	 * @result Nothing
+	 */
+
+snippet isheader
+	/**
+	 * @brief Are the conditions for transition ${0} met.
+	 *
+	 * @param[in] current_env Statemachine Environment.
+	 * @result true if the conditions are met.
+	 */
+
+snippet doheader
+
+	/**
+	 * @brief Execute actions for transition ${0}.
+	 *
+	 * @param[in] current_env Statemachine environment
+	 * @result Nothing
 	 */
 
 snippet doxy
