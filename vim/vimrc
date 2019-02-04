@@ -17,21 +17,24 @@ filetype indent on
 " }}}
 
 "=========================================================================
+" Moving
+" {{{
 " Remove cursor keys, they slow you down.
-" Tried this but it conflicts with most other applications and
-" confuses my fingers in the end.
-" map <Left>  <Nop>
-" map <Right> <Nop>
-" map <Up>    <Nop>
-" map <Down>  <Nop>
+map <Left>  <Nop>
+map <Right> <Nop>
+map <Up>    <Nop>
+map <Down>  <Nop>
 
 " map <S-PageUp>   <NOP>
 " map <S-PageDown> <NOP>
-map <PageUp>     <C-U>
-map <PageDown>   <C-D>
-imap <PageUp>  <C-O><C-U>
-imap <PageDown>  <C-O><C-D>
+" Make page-up followed by page-down return to the
+" exact same spot.
+map  <PageUp>   <C-U>
+map  <PageDown> <C-D>
+imap <PageUp>   <C-O><C-U>
+imap <PageDown> <C-O><C-D>
 set nostartofline
+" }}}
 
 "=========================================================================
 "==== Look and Feel ===============================================
@@ -93,15 +96,18 @@ set path=**
 " on your shell before stating vim.
 " Reason is that this is bandwidth intensive.
 if $FAST
+
 " Highlight the line the cursor is on.
 " Not advisable for slow connections.
 set cursorline
+
 " Make the line numbers relative to the current line
 " This makes is real easy to jump to the right line
 " with   k and j   (i.e.  5j 12j 3k etc)
 " Also not advisable for slow connections.
 set number
 set relativenumber
+
 "
 endif
 " }}}
@@ -116,6 +122,8 @@ endif
 " t=tag completion,
 " i=included files,
 " kspell=current active spell checking
+" Switching on too many of these really slows down the search
+
 set complete=.,w,t,kspell
 
 " Search for tags in tags file and look for it up

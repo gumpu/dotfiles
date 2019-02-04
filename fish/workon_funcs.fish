@@ -1,6 +1,10 @@
 #
 # From <https://coderseye.com/2010/using-virtualenv-with-fish-shell.html>
 #
+# Modified
+#
+# Can these go in .config/fish/functions ?
+#
 
 function fish_prompt
     if [ -z $VIRTUAL_ENV ]
@@ -10,8 +14,12 @@ function fish_prompt
     end
 end
 
+#
+#
+#
 function workon -d "Activate virtual environment in $WORKON_HOME"
   set current_directory (pwd)
+  echo "Remembering to $current_directory"
   set tgt {$WORKON_HOME}$argv[1]
   if [ -d $tgt ]
     cd $tgt
@@ -34,8 +42,11 @@ function workon -d "Activate virtual environment in $WORKON_HOME"
   end
 end
 
-complete -c workon -a "(cd $WORKON_HOME; ls -d *)"
+complete -c workon -a "(ls -d $WORKON_HOME/* | cut -d / -f5)"
 
+#
+#
+#
 function deactivate -d "Exit virtualenv and return to normal shell environment"
     # reset old environment variables
     if test -n "$_OLD_VIRTUAL_PATH"
@@ -48,4 +59,5 @@ function deactivate -d "Exit virtualenv and return to normal shell environment"
     end
     set -e VIRTUAL_ENV
 end
+
 

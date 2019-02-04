@@ -4,7 +4,8 @@
         "~/.vim",
         "~/.vim/bundle",
         "~/.vim/autoload",
-        "~/.vim/spell"
+        "~/.vim/spell",
+        "~/.config/fish"
     ],
 
     "link": {
@@ -14,11 +15,15 @@
         "taskrc":        "~/.taskrc",
         "Rprofile":      "~/.Rprofile",
         "tmux.conf":     "~/.tmux.conf",
-        "vim/vimrc":     "~/.vimrc",
         "tigrc":         "~/.tigrc",
+
+        "vim/vimrc":     "~/.vimrc",
         "vim/snippets":  "~/.vim/snippets",
         "vim/autoload/pathogen.vim": "~/.vim/autoload/pathogen.vim",
-        "vim/get_plugins.sh": "~/.vim/bundle/get_plugins.sh"
+        "vim/get_plugins.sh":        "~/.vim/bundle/get_plugins.sh",
+
+        "fish/config.fish":       "~/.config/fish/config.fish",
+        "fish/workon_funcs.fish": "~/.config/fish/workon_funcs.fish"
     },
 
     "commands": ["echo hello"]

@@ -13,7 +13,6 @@
     ],
 
     "link": {
-        "screenrc":      "~/.screenrc",
         "i3status.conf": "~/.i3status.conf",
         "i3config":      "~/.i3/config",
         "xinitrc":       "~/.xinitrc",
@@ -25,15 +24,16 @@
         "screenrc":      "~/.screenrc",
         "Rprofile":      "~/.Rprofile",
         "tmux.conf":     "~/.tmux.conf",
-        "vim/vimrc":     "~/.vimrc",
-        "vim/gvimrc":    "~/.gvimrc",
-        "craftyrc":      "~/.craftyrc",
+
         "tigrc":         "~/.tigrc",
         "ackrc":         "~/.ackrc",
+
+        "vim/vimrc":     "~/.vimrc",
         "vim/snippets":  "~/.vim/snippets",
         "vim/autoload/pathogen.vim": "~/.vim/autoload/pathogen.vim",
-        "vim/get_plugins.sh": "~/.vim/bundle/get_plugins.sh",
-        "fish/config.fish": "~/.config/fish/config.fish",
+        "vim/get_plugins.sh":        "~/.vim/bundle/get_plugins.sh",
+
+        "fish/config.fish":       "~/.config/fish/config.fish",
         "fish/workon_funcs.fish": "~/.config/fish/workon_funcs.fish"
     },
 
