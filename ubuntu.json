@@ -34,7 +34,8 @@
         "vim/get_plugins.sh":        "~/.vim/bundle/get_plugins.sh",
 
         "fish/config.fish":       "~/.config/fish/config.fish",
-        "fish/workon_funcs.fish": "~/.config/fish/workon_funcs.fish"
+        "fish/workon_funcs.fish": "~/.config/fish/workon_funcs.fish",
+        "fish/functions":         "~/.config/fish/functions"
     },
 
     "commands": ["echo hello world"]

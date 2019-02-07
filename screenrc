@@ -15,18 +15,23 @@ truecolor  on
 altscreen  on
 
 
+defutf8 on
+
+
 # Caption under each window
 caption    always
 # %?    if
 # %F    Has Focus
-# %{.g.} make green
+# %{kw}  make White on black
+# %:    else
+# %{Yk}  make Gray on black
 # %?    endif
 # %=    pad
 # %3n   window number
 # %t    window title
 # [%h]  command and pwd
 # %=    pad
-caption    string "%?%F%{.g.}%? %= %3n %t [%h] %="
+caption    string "%?%F%{wk}%:%{Yk}%? %= %3n %t [%h] %="
 
 hardstatus on
 hardstatus alwayslastline
@@ -51,15 +56,15 @@ bind  s
 vbell off
 
 # ---------------------------------------------------------
-screen -t 源     fish  # 1
-screen -t 作る   fish  # 2
-screen -t 虫     fish  # 3
-screen -t 試験   fish  # 4
-screen -t TMP    fish  # 5
-screen -t PCDem  fish  # 6
-screen -t Spin   fish  # 7
-screen -t 魚     fish  # 9
-
-select 0
-
+# screen -t 源     fish  # 1
+# screen -t 作る   fish  # 2
+# screen -t 虫     fish  # 3
+# screen -t 試験   fish  # 4
+# screen -t TMP    fish  # 5
+# screen -t PCDem  fish  # 6
+# screen -t Spin   fish  # 7
+# screen -t 魚     fish  # 9
+#
+# select 0
+#
 # ============================================================================
