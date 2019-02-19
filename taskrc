@@ -13,9 +13,9 @@
 due=5
 editor=vim
 
-# include /usr/share/taskwarrior/holidays.nl-NL.rc  (Outdated)
+include /usr/share/taskwarrior/holidays.nl-NL.rc
 # Color theme (uncomment one to use)
-include /usr/share/taskwarrior/light-256.theme
+include /usr/share/taskwarrior/dark-256.theme
 
 # Use the command 'task show' to see all defaults and overrides
 dateformat=Y-m-d

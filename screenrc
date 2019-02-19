@@ -14,9 +14,7 @@ termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 truecolor  on
 altscreen  on
 
-
 defutf8 on
-
 
 # Caption under each window
 caption    always
