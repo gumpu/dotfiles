@@ -5,29 +5,24 @@
         "~/.vim/bundle",
         "~/.vim/autoload",
         "~/.vim/spell",
-        "~/.i3",
         "~/.config/fish",
-        "~/.crafty",
-        "~/.crafty/books",
-        "~/.crafty/logs"
+        "~/.i3",
     ],
 
     "link": {
         "i3status.conf": "~/.i3status.conf",
         "i3config":      "~/.i3/config",
         "xinitrc":       "~/.xinitrc",
+        "Xdefaults":     "~/.Xdefaults",
         "inputrc":       "~/.inputrc",
         "gdbinit":       "~/.gdbinit",
-        "Xdefaults":     "~/.Xdefaults",
         "taskrc":        "~/.taskrc",
         "bash_aliases":  "~/.bash_aliases",
         "screenrc":      "~/.screenrc",
         "Rprofile":      "~/.Rprofile",
         "tmux.conf":     "~/.tmux.conf",
-
         "tigrc":         "~/.tigrc",
         "ackrc":         "~/.ackrc",
-
         "vim/vimrc":     "~/.vimrc",
         "vim/snippets":  "~/.vim/snippets",
         "vim/autoload/pathogen.vim": "~/.vim/autoload/pathogen.vim",

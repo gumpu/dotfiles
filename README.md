@@ -17,8 +17,11 @@ as possible from the command line.  The main tools I use are:
 - git
 - task
 - ssh
-- screen (and tmux)
+- screen
 - tig
+- inkscape
+- blender
+- fish  (shell)
 
 This on Ubuntu Linux with i3 as Window Manager.
 Also works under Arch and RaspberryPi.
