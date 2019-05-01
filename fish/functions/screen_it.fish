@@ -9,6 +9,11 @@ function screen_it
             cd /home/frans/Documents/STMATB/Sources/
             set config "screen_$argv.rc"
         end
+    case "issues"
+        begin
+            cd /home/frans/Documents/STMATB/Sources/Issues/
+            set config "screen_$argv.rc"
+        end
     case "gps"
         begin
             cd /home/frans/Documents/InTraffic/GPS_NS/
@@ -21,7 +26,7 @@ function screen_it
         end
     end
 
-    screen -c $HOME/dotfiles/$config
+    screen -c $HOME/dotfiles/$config -S $argv
 end
 
 # --------------------------------------------------

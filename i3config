@@ -125,7 +125,7 @@ bindsym XF86AudioLowerVolume exec amixer -c 0 -- sset Master playback 1dB-
 # bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% && killall -SIGUSR1 i3status
 
 assign [class="Spotify"] 10 spotify
-assign [class="Firefox"] 9 www
+# assign [class="Firefox"] 9 www
 
 # Kill audio with no way to return....   TODO Fix
 # bindsym XF86AudioMute exec amixer -q set Master toggle

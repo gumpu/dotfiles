@@ -16,3 +16,12 @@ snippet end
 snippet line
 	# ---------------------------------------------------------------------
 
+snippet forcsv
+	with open(filename, 'r') as csvfile:
+		datareader = csv.reader(csvfile, delimiter=',')
+		for row in datareader:
+			print(row)
+
+snippet impl
+	@implement{STMA-${0}}
+
