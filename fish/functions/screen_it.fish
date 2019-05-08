@@ -19,6 +19,11 @@ function screen_it
             cd /home/frans/Documents/InTraffic/GPS_NS/
             set config "screen_$argv.rc"
         end
+    case "euler"
+        begin
+            cd /home/frans/
+            set config "screen_$argv.rc"
+        end
     case '*'
         begin
             echo 'unknown project'
