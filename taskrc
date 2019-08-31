@@ -18,9 +18,14 @@ include /usr/share/taskwarrior/holidays.nl-NL.rc
 include /usr/share/taskwarrior/dark-256.theme
 
 # Use the command 'task show' to see all defaults and overrides
-dateformat=Y-m-d
+dateformat=Y-M-D
 dateformat.report=a d-b
 weekstart=Monday
 # Files
 data.location=~/.task
 
+context.work=project:Work
+context.home=project:Cleaning or project:Home
+context.euler=project:Euler
+context.game=project:Game
+context=work

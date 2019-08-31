@@ -33,7 +33,7 @@ client.background       #000000
 set $mod Mod4
 
 gaps inner 5
-gaps outer 25
+gaps outer 4
 
 #workspace 9 gaps inner 1
 #workspace 9 gaps outer 1
@@ -149,6 +149,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # floating_maximum_size 400 x 300
 for_window [class="Spotify"]   floating enable
 for_window [class="Minecraft"] floating enable
+for_window [class="Project C"] floating enable
 # for_window [class="feh"]     floating enable
 # Does not work for_window [class="gitk*"] floating enable
 

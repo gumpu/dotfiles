@@ -21,7 +21,7 @@ function screen_it
         end
     case "euler"
         begin
-            cd /home/frans/
+            cd /home/frans/Documents/Personal/Euler/
             set config "screen_$argv.rc"
         end
     case '*'
