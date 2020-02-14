@@ -3,7 +3,6 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-
 # Solarized
 set $base03    #002b36
 set $base02    #073642
@@ -29,23 +28,20 @@ client.unfocused        $base01 $base01    $base0  $violet    $base03
 client.urgent           $base03 $red       $base1  #900000    $red
 client.background       #000000
 
+# for_window [class=".*"] border pixel 0
+new_window pixel 1
+new_float pixel 1
+
 # A good use for the windows key
 set $mod Mod4
 
-gaps inner 5
-gaps outer 4
+gaps inner 10
+gaps outer 0
 
 #workspace 9 gaps inner 1
 #workspace 9 gaps outer 1
 #workspace 3 gaps inner 5
 #workspace 3 gaps outer 25
-
-#gaps horizontal 15
-#gaps vertical 15
-#gaps top 5
-#gaps bottom 5
-#gaps left 5
-#gaps right 5
 
 # Font for window titles.
 # Will also be used by the bar unless a different font is chosen there
@@ -89,6 +85,9 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
+
+# Rofi
+bindsym $mod+p exec rofi -show
 
 # focus the child container
 #bindcode $mod+d focus child
@@ -136,7 +135,7 @@ exec --no-startup-id sh ~/.fehbg
 # exec compton -f -b
 
 # Remove mouse pointer when not using the mouse....
-# This leads to a blinking mouse pointer.
+# BUG: This leads to a blinking mouse pointer.
 # exec --no-startup-id unclutter
 
 # reload the configuration file
@@ -157,7 +156,7 @@ for_window [class="Project C"] floating enable
 bindsym $mod+m move scratchpad
 bindsym $mod+o scratchpad show
 
-new_window pixel 1
+# new_window pixel 1
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
