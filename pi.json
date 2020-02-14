@@ -26,7 +26,7 @@
         "vim/vimrc":                 "~/.vimrc",
         "vim/snippets":              "~/.vim/snippets",
         "vim/autoload/pathogen.vim": "~/.vim/autoload/pathogen.vim",
-        "vim/get_plugins.sh":        "~/.vim/bundle/get_plugins.sh",
+        "vim/get_plugins.sh":        "~/.vim/bundle/get_plugins.sh"
     },
 
     "commands": ["echo hello world"]

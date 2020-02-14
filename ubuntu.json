@@ -6,7 +6,7 @@
         "~/.vim/autoload",
         "~/.vim/spell",
         "~/.config/fish",
-        "~/.i3",
+        "~/.i3"
     ],
 
     "link": {
@@ -33,7 +33,7 @@
 
         "I3/i3status.conf":       "~/.i3/i3status.conf",
         "I3/i3status_small.conf": "~/.i3/i3status_small.conf",
-        "I3/i3config":            "~/.i3/config",
+        "I3/i3config":            "~/.i3/config"
     },
 
     "commands": ["echo hello world"]
