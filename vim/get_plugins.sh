@@ -27,3 +27,4 @@ git clone https://github.com/tomtom/tlib_vim.git
 git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
 git clone https://github.com/garbas/vim-snipmate.git
 # ----------------------------------------------------------------------------
+git clone git@github.com:paolodragone/vim-pymzn.git

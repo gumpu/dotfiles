@@ -8,3 +8,13 @@ snippet head
 	rm(list=ls())
 	require(tidyverse)
 
+snippet timefrac
+	op <- options(digits.secs=3)
+	read_csv(${0}, col_types = cols(timestamp = col_time(format = "%H:%M:%OS"))
+
+snippet arguments
+	arguments <- commandArgs(trailingOnly = TRUE)
+	input_filename <- arguments[1]
+	output_filename <- arguments[2]
+
+

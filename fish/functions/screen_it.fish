@@ -31,7 +31,7 @@ function screen_it
         end
     end
 
-    screen -c $HOME/dotfiles/$config -S $argv
+    screen -c $HOME/dotfiles/Screen/$config -S $argv
 end
 
 # --------------------------------------------------

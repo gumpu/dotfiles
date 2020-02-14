@@ -28,4 +28,3 @@ context.work=project:Work
 context.home=project:Cleaning or project:Home
 context.euler=project:Euler
 context.game=project:Game
-context=work

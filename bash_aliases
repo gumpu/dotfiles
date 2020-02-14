@@ -29,30 +29,16 @@ export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 # emitted by InkScape that break a makefile build
 export NO_AT_BRIDGE=1
 
-# --
-export OTIS_HOME=/home/frans/Documents/InTraffic/NS_Git/nsr_kwarts/OTIS_V2/otis/Source
-# export OTIS_HOME=/home/frans/Documents/InTraffic/OTIS/otis/Source/
-export PYTHONPATH=$OTIS_HOME/:$OTIS_HOME/lib/:
-export OTIS_LOGGING=/home/frans/Logging
-export OBIS_ID=2700
-#export TRAIN_TYPE=CIVITY
-export TRAIN_TYPE=VIRM
-
 # For ESP32
-export PATH="$PATH:/home/frans/esp/crosstool-NG/builds/xtensa-esp32-elf/bin"
-export IDF_PATH=/home/frans/esp/esp-idf
+# export PATH="$PATH:/home/frans/esp/crosstool-NG/builds/xtensa-esp32-elf/bin"
+# export IDF_PATH=/home/frans/esp/esp-idf
 
 # For MiniZinc
-export PATH="$PATH:/home/frans/Documents/Personal/Coursera/Optimization/MiniZincIDE-2.1.7-bundle-linux-x86_64/"
+# export PATH="$PATH:/home/frans/Documents/Personal/Coursera/Optimization/MiniZincIDE-2.1.7-bundle-linux-x86_64/"
 
 # For ARM
-export PATH="$PATH:/opt/arm/gcc-arm-none-eabi-6-2017-q2-update/bin/"
+# export PATH="$PATH:/opt/arm/gcc-arm-none-eabi-6-2017-q2-update/bin/"
 
-# ============================================================================
-
-export SPIN_LOGGING=~/Logging
-
-# ============================================================================
 
 # Takes care of
 # ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be
