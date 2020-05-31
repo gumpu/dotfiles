@@ -187,7 +187,9 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     status_command i3status --config ~/.i3/i3status.conf
-    tray_output primary
+    # Trayoutput sometimes messes up everything
+    # and the icons become really huge and fill the screen
+    tray_output none
     output eDP-1
     colors {
             background $base03

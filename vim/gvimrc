@@ -3,6 +3,7 @@
 " File:        gvimrc
 " By:          Frans Slothouber
 "
+" I hardly use gvim, always use vim in a terminal
 "=============================================
 " Make shift-insert work like in Xterm
 map  <S-Insert> <MiddleMouse>

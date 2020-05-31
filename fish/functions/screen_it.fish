@@ -24,6 +24,16 @@ function screen_it
             cd /home/frans/Documents/Personal/Euler/
             set config "screen_$argv.rc"
         end
+    case "prezoids"
+        begin
+            cd /home/frans/Documents/Personal/Prezoids/
+            set config "screen_$argv.rc"
+        end
+    case "static"
+        begin
+            cd /home/frans/Documents/Personal/StaticWeb/
+            set config "screen_$argv.rc"
+        end
     case '*'
         begin
             echo 'unknown project'

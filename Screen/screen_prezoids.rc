@@ -1,0 +1,10 @@
+source screenrc
+
+screen -t Build    fish  # 1
+screen -t Edit     fish  # 2
+screen -t Debug    fish  # 3
+screen -t Inkscape fish  # 4
+screen -t Tmp      fish  # 5
+#
+select 0
+

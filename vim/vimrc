@@ -7,6 +7,7 @@
 " pathogen is very handy. Allows you to add and more important
 " remove plugins with ease.
 execute pathogen#infect()
+
 "==== Bare Minimum =======================================================
 " {{{
 " Enable Vim features.
@@ -122,7 +123,7 @@ endif
 " t=tag completion,
 " i=included files,
 " kspell=current active spell checking
-" Switching on too many of these really slows down the search
+" Switching on too many of these really slows the search
 
 set complete=.,w,t,kspell
 
@@ -211,9 +212,6 @@ let r_syntax_folding = 0
 let vimrplugin_vsplit = 0
 " }}}
 
-"===================== VIM NVIM-R Plugin ==================================
-let R_term="urxvt"
-
 "===================== remove spaces at the end of a line =================
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -248,7 +246,7 @@ let g:airline_theme='sol'
 " let g:jedi#completions_enabled 0
 
 "==========================================================================
-" Is usefull but the build-in netrw works better
+" Is useful but the build-in netrw works better
 "
 " NERDTree
 " {{{
@@ -262,6 +260,7 @@ let g:airline_theme='sol'
 " For the super handy vim-localvimrc plugin
 " {{{
 " <https://github.com/embear/vim-localvimrc>
+let g:localvimrc_sandbox=0
 let g:localvimrc_whitelist='/home/frans/Documents/.*'
 " }}}
 
@@ -270,21 +269,22 @@ let g:localvimrc_whitelist='/home/frans/Documents/.*'
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_mode_map = {
-    \ "mode": "active",
-    \ "active_filetypes": [],
-    \ "passive_filetypes": ["c", "python"] }
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
+"
+" let g:syntastic_mode_map = {
+"     \ "mode": "active",
+"     \ "active_filetypes": [],
+"     \ "passive_filetypes": ["c", "python"] }
 
 "==========================================================================
 " Nvim-R
 " {{{
 " Do not turn _ into a <-
 let R_assign = 0
+let R_term="urxvt"
 " }}}
 
 "==========================================================================
