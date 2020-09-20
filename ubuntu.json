@@ -12,6 +12,7 @@
     "link": {
         "Rprofile":         "~/.Rprofile",
         "Screen/screenrc":  "~/.screenrc",
+        "Tmux/tmux.conf":   "~/.tmux.conf",
         "Xdefaults":        "~/.Xdefaults",
         "ackrc":            "~/.ackrc",
         "bash_aliases":     "~/.bash_aliases",
@@ -19,7 +20,6 @@
         "inputrc":          "~/.inputrc",
         "taskrc":           "~/.taskrc",
         "tigrc":            "~/.tigrc",
-        "tmux.conf":        "~/.tmux.conf",
         "xinitrc":          "~/.xinitrc",
 
         "fish/config.fish":       "~/.config/fish/config.fish",

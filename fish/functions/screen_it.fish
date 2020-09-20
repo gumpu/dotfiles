@@ -29,6 +29,11 @@ function screen_it
             cd /home/frans/Documents/Personal/Prezoids/
             set config "screen_$argv.rc"
         end
+    case "kritadev"
+        begin
+            cd /home/frans/Documents/Personal/KritaDev2/
+            set config "screen_$argv.rc"
+        end
     case "static"
         begin
             cd /home/frans/Documents/Personal/StaticWeb/
