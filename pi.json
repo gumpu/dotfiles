@@ -10,14 +10,13 @@
 
     "link": {
         "Rprofile":         "~/.Rprofile",
-        "Screen/screenrc":  "~/.screenrc",
+        "Tmux/tmux.conf":   "~/.tmux.conf",
         "ackrc":            "~/.ackrc",
         "bash_aliases":     "~/.bash_aliases",
         "gdbinit":          "~/.gdbinit",
         "inputrc":          "~/.inputrc",
         "taskrc":           "~/.taskrc",
         "tigrc":            "~/.tigrc",
-        "tmux.conf":        "~/.tmux.conf",
 
         "fish/config.fish":       "~/.config/fish/config.fish",
         "fish/workon_funcs.fish": "~/.config/fish/workon_funcs.fish",
