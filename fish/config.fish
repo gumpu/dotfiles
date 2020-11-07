@@ -5,8 +5,6 @@ set -x FAST 1
 set -x NO_AT_BRIDGE 1
 set -x PATH $PATH /home/frans/bin
 set -x PATH $PATH /snap/bin
-set -gx WORKON_HOME /home/frans/.virtualenvs/
-. ~/.config/fish/workon_funcs.fish
 
 if status is-interactive
     fish_logo
