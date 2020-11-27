@@ -45,6 +45,16 @@ function tmux_it
                 tmux new-window -t "$argv" -n 'Build'
                 tmux attach -t "$argv"
             end
+        case "sa"
+            begin
+                echo 'sa'
+                cd /home/frans/Documents/Personal/Optimization/SA/
+                tmux new-session -d -s "$argv"
+                tmux new-window -t "$argv" -n 'Edit'
+                tmux new-window -t "$argv" -n 'Debug'
+                tmux new-window -t "$argv" -n 'Build'
+                tmux attach -t "$argv"
+            end
         echo 'Done'
     end
 end
