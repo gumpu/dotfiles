@@ -1,5 +1,5 @@
 all :
-	cat 'Select an architecture'
+	echo 'Select an architecture'
 
 pi :
 	python3 ./dotty/dotty.py -r pi.json
