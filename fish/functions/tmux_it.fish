@@ -35,6 +35,16 @@ function tmux_it
                 tmux new-window -t "$argv" -n 'Serve'
                 tmux attach -t "$argv"
             end
+        case "kaggle"
+            begin
+                echo 'Euler'
+                cd /home/frans/Documents/Personal/Kaggle/
+                tmux new-session -d -s "$argv"
+                tmux new-window -t "$argv" -n 'Edit'
+                tmux new-window -t "$argv" -n 'Run'
+                tmux new-window -t "$argv" -n 'Explore'
+                tmux attach -t "$argv"
+            end
         case "euler"
             begin
                 echo 'Euler'
