@@ -1,7 +1,7 @@
 # Test
 
 info auto-load
-# To completely disable this security protection
+# To completely disable security protection
 set auto-load safe-path /
 
 set history save

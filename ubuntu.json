@@ -1,21 +1,17 @@
-
 {
     "directories": [
         "~/.vim",
         "~/.vim/bundle",
         "~/.vim/autoload",
         "~/.vim/spell",
-        "~/.config/fish",
-        "~/.i3"
+        "~/.config/fish"
     ],
 
     "link": {
         "Rprofile":         "~/.Rprofile",
-        "Screen/screenrc":  "~/.screenrc",
         "Tmux/tmux.conf":   "~/.tmux.conf",
         "Xdefaults":        "~/.Xdefaults",
         "ackrc":            "~/.ackrc",
-        "bash_aliases":     "~/.bash_aliases",
         "gdbinit":          "~/.gdbinit",
         "inputrc":          "~/.inputrc",
         "taskrc":           "~/.taskrc",
@@ -23,19 +19,14 @@
         "xinitrc":          "~/.xinitrc",
 
         "fish/config.fish":       "~/.config/fish/config.fish",
-        "fish/workon_funcs.fish": "~/.config/fish/workon_funcs.fish",
         "fish/functions":         "~/.config/fish/functions",
 
         "vim/vimrc":                 "~/.vimrc",
         "vim/snippets":              "~/.vim/snippets",
         "vim/autoload/pathogen.vim": "~/.vim/autoload/pathogen.vim",
-        "vim/get_plugins.sh":        "~/.vim/bundle/get_plugins.sh",
-
-        "I3/i3status.conf":       "~/.i3/i3status.conf",
-        "I3/i3status_small.conf": "~/.i3/i3status_small.conf",
-        "I3/i3config":            "~/.i3/config"
+        "vim/get_plugins.sh":        "~/.vim/bundle/get_plugins.sh"
     },
 
-    "commands": ["echo hello world"]
+    "commands": ["echo Done, ready for use"]
 }
 
