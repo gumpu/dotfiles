@@ -3,6 +3,16 @@
 " Frans Slothouber
 "
 
+" From <https://github.com/dag/vim-fish>
+" ""Vim needs a more POSIX compatible shell than fish for certain
+" functionality to work, such as :%!, compressed help pages and many
+" third-party addons. If you use fish as your login shell or launch Vim from
+" fish, you need to set shell to something else in your ~/.vimrc, for
+" example:""
+if &shell =~# 'fish$'
+    set shell=bash
+endif
+
 " This should always be first.
 " pathogen is very handy. Allows you to add and more important
 " remove plugins with ease.
@@ -246,7 +256,7 @@ let g:airline_theme='sol'
 " let g:jedi#completions_enabled 0
 
 "==========================================================================
-" Is useful but the build-in netrw works better
+" NERDTree is useful but the build-in netrw works better
 "
 " NERDTree
 " {{{
@@ -284,13 +294,15 @@ let g:localvimrc_whitelist='/home/frans/Documents/.*'
 " {{{
 " Do not turn _ into a <-
 let R_assign = 0
-let R_term="urxvt"
+" let R_term="urxvt"
+let R_term="st"
 " }}}
 
 "==========================================================================
 " SnipMate
 " {{{
-
+let g:snipMate = {}
+let g:snipMate.snippet_version = 1
 " }}}
 "==========================================================================
 " vi: spell spl=en

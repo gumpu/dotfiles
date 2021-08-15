@@ -4,7 +4,7 @@
 
 function tmux_it
     switch "$argv"
-        case "stm"
+        case stm
             begin
                 echo 'STM'
                 cd /home/frans/Documents/InTraffic/P44/Source/
@@ -17,7 +17,7 @@ function tmux_it
                 tmux new-window -t "$argv" -n 'Build'
                 tmux attach -t "$argv"
             end
-        case "issues"
+        case issues
             begin
                 echo 'Issues'
                 cd /home/frans/Documents/InTraffic/P44/Issues/
@@ -25,7 +25,7 @@ function tmux_it
                 tmux new-window -t "$argv" 'mutt'
                 tmux attach -t "$argv"
             end
-        case "static"
+        case static
             begin
                 echo 'Static'
                 cd /home/frans/Documents/Personal/StaticWeb/
@@ -35,7 +35,7 @@ function tmux_it
                 tmux new-window -t "$argv" -n 'Serve'
                 tmux attach -t "$argv"
             end
-        case "kaggle"
+        case kaggle
             begin
                 echo 'Euler'
                 cd /home/frans/Documents/Personal/Kaggle/
@@ -45,7 +45,7 @@ function tmux_it
                 tmux new-window -t "$argv" -n 'Explore'
                 tmux attach -t "$argv"
             end
-        case "euler"
+        case euler
             begin
                 echo 'Euler'
                 cd /home/frans/Documents/Personal/Euler/projecteuler
@@ -55,7 +55,7 @@ function tmux_it
                 tmux new-window -t "$argv" -n 'Build'
                 tmux attach -t "$argv"
             end
-        case "sa"
+        case sa
             begin
                 echo 'sa'
                 cd /home/frans/Documents/Personal/Optimization/SA/
@@ -63,6 +63,26 @@ function tmux_it
                 tmux new-window -t "$argv" -n 'Edit'
                 tmux new-window -t "$argv" -n 'Debug'
                 tmux new-window -t "$argv" -n 'Build'
+                tmux attach -t "$argv"
+            end
+        case galaxy
+            begin
+                echo 'sa'
+                cd /home/frans/Documents/Personal/Games/GalaxyNGV2/
+                tmux new-session -d -s "$argv"
+                tmux new-window -t "$argv" -n 'Edit'
+                tmux new-window -t "$argv" -n 'Debug'
+                tmux new-window -t "$argv" -n 'Build'
+                tmux attach -t "$argv"
+            end
+        case rl
+            begin
+                echo 'rl'
+                cd /home/frans/Documents/Personal/Coursera/RL/
+                tmux new-session -d -s "$argv"
+                tmux new-window -t "$argv" -n 'Edit'
+                tmux new-window -t "$argv" -n 'Debug'
+                tmux new-window -t "$argv" -n 'Sandbox'
                 tmux attach -t "$argv"
             end
         echo 'Done'

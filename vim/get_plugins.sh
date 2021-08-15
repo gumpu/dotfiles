@@ -30,4 +30,6 @@ git clone https://github.com/garbas/vim-snipmate.git
 git clone git@github.com:paolodragone/vim-pymzn.git
 git clone git@github.com:ryanoasis/vim-devicons.git
 
+# ----------------------------------------------------------------------------
+git clone git@github.com:dag/vim-fish.git
 # ------------------------ End of file -----------------------------
