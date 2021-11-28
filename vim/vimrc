@@ -286,8 +286,8 @@ let g:localvimrc_whitelist='/home/frans/Documents/.*'
 "
 " let g:syntastic_mode_map = {
 "     \ "mode": "active",
-"     \ "active_filetypes": [],
-"     \ "passive_filetypes": ["c", "python"] }
+"     \ "active_filetypes": [ "markdown" ],
+"     \ "passive_filetypes": ["c", "python", "markdown"] }
 
 "==========================================================================
 " Nvim-R

@@ -67,7 +67,7 @@ function tmux_it
             end
         case galaxy
             begin
-                echo 'sa'
+                echo 'galaxy'
                 cd /home/frans/Documents/Personal/Games/GalaxyNGV2/
                 tmux new-session -d -s "$argv"
                 tmux new-window -t "$argv" -n 'Edit'
@@ -86,6 +86,18 @@ function tmux_it
                 tmux attach -t "$argv"
             end
         echo 'Done'
+        case aws
+            begin
+                echo 'aws'
+                cd /home/frans/Documents/InTraffic/STM_AWS/Source/
+                tmux new-session -d -s "$argv"
+                tmux new-window -t "$argv" -n 'Edit'
+                tmux new-window -t "$argv" -n 'Debug'
+                tmux new-window -t "$argv" -n 'Sandbox'
+                tmux attach -t "$argv"
+            end
+        echo 'Done'
+
     end
 end
 
