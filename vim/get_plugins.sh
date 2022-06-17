@@ -5,8 +5,8 @@
 # git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 # git clone https://github.com/davidhalter/jedi-vim.git
 
-git clone git://github.com/tpope/vim-unimpaired.git
-git clone git@github.com:vim-scripts/a.vim.git
+git clone https://github.com/tpope/vim-unimpaired.git
+git clone https://github.com/vim-scripts/a.vim.git
 git clone https://github.com/altercation/vim-colors-solarized.git
 
 git clone https://github.com/bling/vim-airline
@@ -20,6 +20,9 @@ git clone https://github.com/tpope/vim-fugitive.git
 git clone https://github.com/vim-scripts/taglist.vim.git
 git clone https://github.com/mboughaba/i3config.vim.git
 git clone https://github.com/crazymanjinn/MultipleSearch_solarized.git
+
+# GNU Assembler
+git clone https://github.com/Shirk/vim-gas
 
 # ----------------------------------------------------------------------------
 # SnipMate. all three are needed
