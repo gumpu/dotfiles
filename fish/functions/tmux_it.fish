@@ -6,7 +6,22 @@ function tmux_it
     switch "$argv"
         case stm
             begin
-                echo 'STM'
+                echo 'STM-ATB'
+                cd /home/frans/Documents/InTraffic/P44/Source/
+                # Start in detached mode otherwise the commands
+                # that are followed are only executed after
+                # the session ends :)
+                tmux new-session -d -s "$argv"
+                tmux new-window -t "$argv" -n 'Edit'
+                tmux new-window -t "$argv" -n 'Debug'
+                tmux new-window -t "$argv" -n 'Build'
+                tmux new-window -t "$argv" -n 'Jlink'
+                tmux new-window -t "$argv" -n 'Output'
+                tmux attach -t "$argv"
+            end
+        case ctrl
+            begin
+                echo 'STM-CTRL'
                 cd /home/frans/Documents/InTraffic/P44/Source/
                 # Start in detached mode otherwise the commands
                 # that are followed are only executed after
@@ -22,7 +37,8 @@ function tmux_it
                 echo 'Issues'
                 cd /home/frans/Documents/InTraffic/P44/Issues/
                 tmux new-session -d -s "$argv"
-                tmux new-window -t "$argv" 'mutt'
+                tmux new-window -t "$argv" -n 'DataAnalyse'
+                tmux new-window -t "$argv" -n 'Temp'
                 tmux attach -t "$argv"
             end
         case static
@@ -37,7 +53,7 @@ function tmux_it
             end
         case kaggle
             begin
-                echo 'Euler'
+                echo 'Kaggle'
                 cd /home/frans/Documents/Personal/Kaggle/
                 tmux new-session -d -s "$argv"
                 tmux new-window -t "$argv" -n 'Edit'
@@ -69,6 +85,16 @@ function tmux_it
             begin
                 echo 'galaxy'
                 cd /home/frans/Documents/Personal/Games/GalaxyNGV2/
+                tmux new-session -d -s "$argv"
+                tmux new-window -t "$argv" -n 'Edit'
+                tmux new-window -t "$argv" -n 'Debug'
+                tmux new-window -t "$argv" -n 'Build'
+                tmux attach -t "$argv"
+            end
+        case picomoeba
+            begin
+                echo 'picomoeba'
+                cd /home/frans/Documents/Personal/Games/picomoeba/
                 tmux new-session -d -s "$argv"
                 tmux new-window -t "$argv" -n 'Edit'
                 tmux new-window -t "$argv" -n 'Debug'

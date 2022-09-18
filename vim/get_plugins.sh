@@ -13,7 +13,7 @@ git clone https://github.com/bling/vim-airline
 git clone https://github.com/vim-airline/vim-airline-themes.git
 
 git clone https://github.com/embear/vim-localvimrc.git
-git clone https://github.com/jalvesaq/Nvim-R.git
+# git clone https://github.com/jalvesaq/Nvim-R.git
 git clone https://github.com/jmcantrell/vim-virtualenv
 git clone https://github.com/mileszs/ack.vim.git
 git clone https://github.com/tpope/vim-fugitive.git
@@ -32,4 +32,9 @@ git clone git@github.com:ryanoasis/vim-devicons.git
 
 # ----------------------------------------------------------------------------
 git clone git@github.com:dag/vim-fish.git
+
+
+# Testing
+git clone https://github.com/lfv89/vim-interestingwords
+git clone https://github.com/jpalardy/vim-slime
 # ------------------------ End of file -----------------------------

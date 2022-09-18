@@ -24,4 +24,7 @@ dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XA
 exec /usr/local/bin/slstatus &
 exec /usr/local/bin/dwm
 
+# FVWM3
+# exec /home/frans/local/bin/fvwm3
+
 # ------------------------ End of file -----------------------------

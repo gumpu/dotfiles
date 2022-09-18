@@ -25,3 +25,20 @@ snippet forcsv
 snippet impl
 	@implement{STMA-${0}}
 
+snippet analyse
+	#
+	#
+
+	import sys
+
+	def analyse(filename):
+		with open(filename) as inpf:
+			for line in inpf:
+				line = line.strip()
+				print(line)
+
+
+	if __name__ == "__main__":
+		analyse(sys.argv[1])
+
+# --------------- end of file -----------------------------------------

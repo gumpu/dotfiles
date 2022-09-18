@@ -50,6 +50,45 @@ set nostartofline
 "=========================================================================
 "==== Look and Feel ===============================================
 " {{{
+"
+" Force to use underline for spell check results
+" The defaults do not work with all terminals, especially Tmux.
+augroup SpellUnderline
+  autocmd!
+  autocmd ColorScheme *
+    \ highlight SpellBad
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    \   guisp=Red
+  autocmd ColorScheme *
+    \ highlight SpellCap
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    \   guisp=Red
+  autocmd ColorScheme *
+    \ highlight SpellLocal
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    \   guisp=Red
+  autocmd ColorScheme *
+    \ highlight SpellRare
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    \   guisp=Red
+  augroup END
+
 set encoding=utf-8
 set showbreak=↪
 set number
@@ -97,6 +136,7 @@ let loaded_matchparen=1
 " {{{
 " Switch on search pattern highlighting
 set hlsearch
+" Use :find somefile.h   to find somefile.h any where in the tree
 set path=**
 " }}}
 
@@ -107,19 +147,16 @@ set path=**
 " on your shell before stating vim.
 " Reason is that this is bandwidth intensive.
 if $FAST
+    " Highlight the line the cursor is on.
+    " Not advisable for slow connections.
+    set cursorline
 
-" Highlight the line the cursor is on.
-" Not advisable for slow connections.
-set cursorline
-
-" Make the line numbers relative to the current line
-" This makes is real easy to jump to the right line
-" with   k and j   (i.e.  5j 12j 3k etc)
-" Also not advisable for slow connections.
-set number
-set relativenumber
-
-"
+    " Make the line numbers relative to the current line
+    " This makes is real easy to jump to the right line
+    " with   k and j   (i.e.  5j 12j 3k etc)
+    " Also not advisable for slow connections.
+    set number
+    set relativenumber
 endif
 " }}}
 
@@ -290,12 +327,13 @@ let g:localvimrc_whitelist='/home/frans/Documents/.*'
 "     \ "passive_filetypes": ["c", "python", "markdown"] }
 
 "==========================================================================
+" Replaced by Slime
 " Nvim-R
 " {{{
 " Do not turn _ into a <-
-let R_assign = 0
+" let R_assign = 0
 " let R_term="urxvt"
-let R_term="st"
+" let R_term="st"
 " }}}
 
 "==========================================================================
@@ -305,4 +343,10 @@ let g:snipMate = {}
 let g:snipMate.snippet_version = 1
 " }}}
 "==========================================================================
+" Slime is the best thing since sliced bread
+" {{{
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
+" }}}
+
 " vi: spell spl=en
