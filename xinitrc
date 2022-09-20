@@ -10,8 +10,9 @@ xset -b
 setxkbmap -option ctrl:nocaps
 xmodmap -e "keycode 94 = Shift_L"
 
-# Switch-off the touchpad. Nipple mouse is better!
-# synclient TouchpadOff=1
+# Switch-off the touchpad. The one on my ThinkPad is over sensitive
+# and gets in the way while using the keyboard.
+synclient TouchpadOff=1
 
 xrdb -merge ~/.Xdefaults
 
