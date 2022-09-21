@@ -6,22 +6,23 @@
 # git clone https://github.com/davidhalter/jedi-vim.git
 
 git clone https://github.com/tpope/vim-unimpaired.git
+
+# Use :A to got from the .c file to the .h file and visa versa
 git clone https://github.com/vim-scripts/a.vim.git
+# The one and only true color scheme
 git clone https://github.com/altercation/vim-colors-solarized.git
 
 git clone https://github.com/bling/vim-airline
 git clone https://github.com/vim-airline/vim-airline-themes.git
 
+# Search for and load local vimrc files
 git clone https://github.com/embear/vim-localvimrc.git
-# git clone https://github.com/jalvesaq/Nvim-R.git
 git clone https://github.com/jmcantrell/vim-virtualenv
 git clone https://github.com/mileszs/ack.vim.git
 git clone https://github.com/tpope/vim-fugitive.git
 git clone https://github.com/vim-scripts/taglist.vim.git
-git clone https://github.com/mboughaba/i3config.vim.git
-git clone https://github.com/crazymanjinn/MultipleSearch_solarized.git
 
-# GNU Assembler
+# Syntax highlighting for GNU Assembler
 git clone https://github.com/Shirk/vim-gas
 
 # ----------------------------------------------------------------------------
@@ -30,12 +31,12 @@ git clone https://github.com/tomtom/tlib_vim.git
 git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
 git clone https://github.com/garbas/vim-snipmate.git
 # ----------------------------------------------------------------------------
+
+# Syntax highlighting for MiniZinc files
 git clone git@github.com:paolodragone/vim-pymzn.git
-git clone git@github.com:ryanoasis/vim-devicons.git
 
 # ----------------------------------------------------------------------------
 git clone git@github.com:dag/vim-fish.git
-
 
 # Testing
 git clone https://github.com/lfv89/vim-interestingwords
