@@ -12,7 +12,7 @@ Depending on which OS/Machine you are run one of the following:
     make arch
     make ubuntu
 
-The run
+Then run
 
     cd ~/.vim/bundle
     ./get_plugins.sh
@@ -24,11 +24,12 @@ prefer to run as much as possible from the command line.  The main tools I use
 are:
 
 - Vim (+ fugitive + slime)
-- Python
-- R
+- make
+- git + tig
 - C (gcc)
 - gdb
-- git + tig
+- Python
+- R
 - task
 - ssh
 - tmux
@@ -36,6 +37,7 @@ are:
 - blender
 - fish (shell)
 - surf (webbrowser)
+- kb
 
 This on Ubuntu with dwm <https://dwm.suckless.org/> as Window Manager.
 Also works under Arch and Raspberry Pi OS.
