@@ -29,3 +29,4 @@ context.work=project:AWS or project:P44 or project:DevEnv
 context.home=project:Cleaning or project:Home
 context.euler=project:Euler
 context.game=project:Game
+context=work
