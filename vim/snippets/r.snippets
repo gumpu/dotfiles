@@ -20,3 +20,10 @@ snippet arguments
 snippet line
 	# ---------------------------------------------------------------
 
+snippet analyse
+	rm(list=ls())
+	require(tidyverse)
+
+	dataset <- read_csv(${0})
+
+	# ---------------------------------------------------------------

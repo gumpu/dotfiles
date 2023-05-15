@@ -30,6 +30,8 @@ snippet analyse
 	#
 
 	import sys
+	import re
+	import json
 
 	def analyse(filename):
 		with open(filename) as inpf:
@@ -40,5 +42,7 @@ snippet analyse
 
 	if __name__ == "__main__":
 		analyse(sys.argv[1])
+
+	# --------------- end of file -----------------------------------------
 
 # --------------- end of file -----------------------------------------
