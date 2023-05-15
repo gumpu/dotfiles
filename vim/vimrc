@@ -175,14 +175,14 @@ endif
 " {{{
 " .=Current buffer,
 " w=other windows,
-" b=other loader buffers in the buffers " list,
+" b=other loaded buffers in the buffers " list,
 " u=unloaded buffers in the buffers list
 " t=tag completion,
 " i=included files,
 " kspell=current active spell checking
 " Switching on too many of these really slows the search
 
-set complete=.,w,t,kspell
+set complete=.,w,b,t,kspell
 
 " Search for tags in tags file and look for it up
 " in the directory tree too.
