@@ -3,7 +3,7 @@ i1lLIj
 
 0oO
 
-rn m nn dp pq gpq fi fl
+rn m nn dp pq 9gpq fi fl sz5
 
 - _  = | \ /
 
@@ -11,4 +11,6 @@ bar.foo() { foobar }  array[20];
 
 : ; ` ' " . ,
 
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
 

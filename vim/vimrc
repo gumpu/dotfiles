@@ -14,7 +14,7 @@ if &shell =~# 'fish$'
 endif
 
 " This should always be first.
-" pathogen is very handy. Allows you to add and more important
+" Pathogen is very handy. Allows you to add and more important
 " remove plugins with ease.
 execute pathogen#infect()
 
@@ -50,6 +50,45 @@ set nostartofline
 "=========================================================================
 "==== Look and Feel ===============================================
 " {{{
+"
+" Force to use underline for spell check results
+" The defaults do not work with all terminals, especially Tmux.
+augroup SpellUnderline
+  autocmd!
+  autocmd ColorScheme *
+    \ highlight SpellBad
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    \   guisp=Red
+  autocmd ColorScheme *
+    \ highlight SpellCap
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    \   guisp=Red
+  autocmd ColorScheme *
+    \ highlight SpellLocal
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    \   guisp=Red
+  autocmd ColorScheme *
+    \ highlight SpellRare
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    \   guisp=Red
+  augroup END
+
 set encoding=utf-8
 set showbreak=↪
 set number
@@ -61,6 +100,7 @@ syntax enable
 " Use 256 colours
 set t_Co=256
 " Ideally this would change automatically based on the amount of ambient light
+" or the current terminal colors   TODO FIXME
 set background=dark
 " set background=light
 colorscheme solarized
@@ -88,18 +128,29 @@ set backspace=indent,eol,start
 set so=10
 " More space for the help window
 set helpheight=40
-" Do not highlight matching paren.
-" (Too distracting, and makes it hard to see " where the cursor is).
+" Do not highlight matching parentheses.
+" (Too distracting, and makes it hard to see
+" where the cursor is).
 let loaded_matchparen=1
 " }}}
-
+"======================== STATUS LINE =====================
+" {{{
+" Make command line one line high.
+set ch=1
+""  Handled by airline
+set noruler
+" Always show a status line.
+set laststatus=2
+" let g:airline#extensions#branch#enabled=1
+set noshowmode
+" }}}
 "==== Search ======================================================
 " {{{
 " Switch on search pattern highlighting
 set hlsearch
+" Use :find somefile.h   to find somefile.h any where in the tree
 set path=**
 " }}}
-
 "==== Fancy Look and Feel =========================================
 " {{{
 " This only works if you did a:
@@ -107,35 +158,31 @@ set path=**
 " on your shell before stating vim.
 " Reason is that this is bandwidth intensive.
 if $FAST
+    " Highlight the line the cursor is on.
+    " Not advisable for slow connections.
+    set cursorline
 
-" Highlight the line the cursor is on.
-" Not advisable for slow connections.
-set cursorline
-
-" Make the line numbers relative to the current line
-" This makes is real easy to jump to the right line
-" with   k and j   (i.e.  5j 12j 3k etc)
-" Also not advisable for slow connections.
-set number
-set relativenumber
-
-"
+    " Make the line numbers relative to the current line
+    " This makes is real easy to jump to the right line
+    " with   k and j   (i.e.  5j 12j 3k etc)
+    " Also not advisable for slow connections.
+    set number
+    set relativenumber
 endif
 " }}}
-
 "=======================================================
 " Completion options
 " {{{
 " .=Current buffer,
 " w=other windows,
-" b=other loader buffers in the buffers " list,
+" b=other loaded buffers in the buffers " list,
 " u=unloaded buffers in the buffers list
 " t=tag completion,
 " i=included files,
 " kspell=current active spell checking
 " Switching on too many of these really slows the search
 
-set complete=.,w,t,kspell
+set complete=.,w,b,t,kspell
 
 " Search for tags in tags file and look for it up
 " in the directory tree too.
@@ -198,62 +245,34 @@ nnoremap <F2> :copen<CR>
 nnoremap <F5> :read !/home/frans/bin/static_prototype.py %:p<CR>
 " }}}
 
-"======================== STATUS LINE =====================
-" {{{
-" Make command line one line high.
-set ch=1
-" Handled by airline
-set noruler
-" Always show a status line.
-set laststatus=2
-let g:airline#extensions#branch#enabled=1
-" }}}
-
-"===================== VIM R Plugin =======================================
-" {{{
-" Do _not_ replace _ with <-
-let vimrplugin_assign = 0
-" Send visually selected lines to R
-let vimrplugin_map_r = 1
-" We love folding, also in R.
-let r_syntax_folding = 0
-" Set to 1 to do a vertical split. So we have vim on one side
-" and the R console on the other side.
-let vimrplugin_vsplit = 0
-" }}}
-
 "===================== remove spaces at the end of a line =================
 autocmd BufWritePre * %s/\s\+$//e
 
 "==========================================================================
 " Airline
 " {{{
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-" unicode symbols for the status bar.
-" let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-" let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
+" if !exists('g:airline_symbols')
+"     let g:airline_symbols = {}
+" endif
+" " unicode symbols for the status bar.
+" let g:airline_left_sep = '▶'
+" let g:airline_left_alt_sep = ''
+" let g:airline_right_sep = '◀'
+" let g:airline_right_alt_sep = ''
 " let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-" let g:airline_symbols.paste = 'Þ'
-" let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
-let g:airline#extensions#virtualenv#enabled = 1
-let g:airline#extensions#tabline#enabled = 0
-let g:airline_theme='sol'
+" let g:airline_symbols.branch = '⎇'
+" let g:airline_symbols.paste = 'ρ'
+" let g:airline_symbols.whitespace = 'Ξ'
+" let g:airline_symbols.colnr = ' ℅:'
+" let g:airline#extensions#virtualenv#enabled = 1
+" let g:airline#extensions#tabline#enabled = 0
+" let g:airline_symbols.notexists = 'Ɇ'
+" let g:airline_theme='sol'
+" let g:airline_symbols.readonly = ''
+" let g:airline_symbols.linenr = ' :'
+" let g:airline_symbols.maxlinenr = '☰ '
+" let g:airline_symbols.dirty='⚡'
 " }}}
-
-"==========================================================================
-" JEDI
-"==========================================================================
-" TODO Figure out why this does not work
-" let g:jedi#completions_enabled 0
 
 "==========================================================================
 " NERDTree is useful but the build-in netrw works better
@@ -273,31 +292,15 @@ let g:airline_theme='sol'
 let g:localvimrc_sandbox=0
 let g:localvimrc_whitelist='/home/frans/Documents/.*'
 " }}}
-
 "==========================================================================
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 0
-" let g:syntastic_check_on_wq = 0
-"
-" let g:syntastic_mode_map = {
-"     \ "mode": "active",
-"     \ "active_filetypes": [ "markdown" ],
-"     \ "passive_filetypes": ["c", "python", "markdown"] }
-
-"==========================================================================
+" Replaced by Slime
 " Nvim-R
 " {{{
 " Do not turn _ into a <-
-let R_assign = 0
+" let R_assign = 0
 " let R_term="urxvt"
-let R_term="st"
+" let R_term="st"
 " }}}
-
 "==========================================================================
 " SnipMate
 " {{{
@@ -306,9 +309,138 @@ let g:snipMate.snippet_version = 1
 " }}}
 "==========================================================================
 "
-"
-"
 
 let g:asmsyntax = "gas"
+"
+" Slime is the best thing since sliced bread
+" {{{
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
+" }}}
+"==========================================================================
+" from https://cscope.sourceforge.net/cscope_maps.vim  / Jason Duell
+" {{{
+if has("cscope")
+    " use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
+    set cscopetag
+    " check cscope for definition of a symbol before checking ctags: set to 1
+    " if you want the reverse search order.
+    set csto=0
+    " add any cscope database in current directory
+    if filereadable("cscope.out")
+        cs add cscope.out
+    " else add the database pointed to by environment variable
+    elseif $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
+    endif
+    " show msg when any other cscope db added
+    set cscopeverbose
+
+    """"""""""""" My cscope/vim key mappings
+    " The following maps all invoke one of the following cscope search types:
+    "
+    "   's'   symbol: find all references to the token under cursor
+    "   'g'   global: find global definition(s) of the token under cursor
+    "   'c'   calls:  find all calls to the function name under cursor
+    "   't'   text:   find all instances of the text under cursor
+    "   'e'   egrep:  egrep search for the word under cursor
+    "   'f'   file:   open the filename under cursor
+    "   'i'   includes: find files that include the filename under cursor
+    "   'd'   called: find functions that function under cursor calls
+    "
+    " Below are three sets of the maps: one set that just jumps to your
+    " search result, one that splits the existing vim window horizontally and
+    " diplays your search result in the new window, and one that does the same
+    " thing, but does a vertical split instead (vim 6 only).
+    "
+    " I've used CTRL-\ and CTRL-@ as the starting keys for these maps, as it's
+    " unlikely that you need their default mappings (CTRL-\'s default use is
+    " as part of CTRL-\ CTRL-N typemap, which basically just does the same
+    " thing as hitting 'escape': CTRL-@ doesn't seem to have any default use).
+    " If you don't like using 'CTRL-@' or CTRL-\, , you can change some or all
+    " of these maps to use other keys.  One likely candidate is 'CTRL-_'
+    " (which also maps to CTRL-/, which is easier to type).  By default it is
+    " used to switch between Hebrew and English keyboard mode.
+    "
+    " All of the maps involving the <cfile> macro use '^<cfile>$': this is so
+    " that searches over '#include <time.h>" return only references to
+    " 'time.h', and not 'sys/time.h', etc. (by default cscope will return all
+    " files that contain 'time.h' as part of their name).
+
+    " To do the first type of search, hit 'CTRL-\', followed by one of the
+    " cscope search types above (s,g,c,t,e,f,i,d).  The result of your cscope
+    " search will be displayed in the current window.  You can use CTRL-T to
+    " go back to where you were before the search.
+    "
+
+    nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+    " Using 'CTRL-spacebar' (intepreted as CTRL-@ by vim) then a search type
+    " makes the vim window split horizontally, with search result displayed in
+    " the new window.
+    nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-@>i :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>
+
+    " Hitting CTRL-space *twice* before the search type does a vertical
+    " split instead of a horizontal one (vim 6 and up only)
+    "
+    " (Note: you may wish to put a 'set splitright' in your .vimrc
+    " if you prefer the new window on the right instead of the left
+    nmap <C-@><C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-@><C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+
+endif
+" }}}
+
+" let g:lightline.colorscheme = 'solarized'
+let g:lightline = { 'colorscheme': 'solarized', }
+
+let g:lightline = {
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
+    \ },
+    \ 'component_function': {
+    \   'fugitive': 'LightlineFugitive',
+    \   'filename': 'LightlineFilename'
+    \ }
+    \ }
+function! LightlineModified()
+    return &ft =~# 'help\|vimfiler' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+endfunction
+function! LightlineReadonly()
+    return &ft !~? 'help\|vimfiler' && &readonly ? 'RO' : ''
+endfunction
+function! LightlineFilename()
+    return (LightlineReadonly() !=# '' ? LightlineReadonly() . ' ' : '') .
+    \ (&ft ==# 'vimfiler' ? vimfiler#get_status_string() :
+    \  &ft ==# 'unite' ? unite#get_status_string() :
+    \ expand('%:t') !=# '' ? expand('%:t') : '[No Name]') .
+    \ (LightlineModified() !=# '' ? ' ' . LightlineModified() : '')
+endfunction
+function! LightlineFugitive()
+    if exists('*FugitiveHead')
+        return FugitiveHead()
+    endif
+    return ''
+endfunction
 
 " vi: spell spl=en
