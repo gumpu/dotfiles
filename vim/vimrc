@@ -308,6 +308,10 @@ let g:snipMate = {}
 let g:snipMate.snippet_version = 1
 " }}}
 "==========================================================================
+"
+
+let g:asmsyntax = "gas"
+"
 " Slime is the best thing since sliced bread
 " {{{
 let g:slime_target = "tmux"
@@ -438,6 +442,5 @@ function! LightlineFugitive()
     endif
     return ''
 endfunction
-
 
 " vi: spell spl=en
