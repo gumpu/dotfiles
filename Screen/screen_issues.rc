@@ -1,9 +1,0 @@
-source screenrc
-
-screen -t 源     fish  # 1
-screen -t 作る   fish  # 2
-screen -t 虫     fish  # 3
-screen -t 魚     fish  # 9
-
-select 0
-
