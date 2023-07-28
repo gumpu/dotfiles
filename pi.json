@@ -5,7 +5,6 @@
         "~/.vim/bundle",
         "~/.vim/autoload",
         "~/.vim/spell",
-        "~/.config/fish"
     ],
 
     "link": {
@@ -17,11 +16,6 @@
         "inputrc":          "~/.inputrc",
         "taskrc":           "~/.taskrc",
         "tigrc":            "~/.tigrc",
-
-        "fish/config.fish":       "~/.config/fish/config.fish",
-        "fish/workon_funcs.fish": "~/.config/fish/workon_funcs.fish",
-        "fish/functions":         "~/.config/fish/functions",
-
         "vim/vimrc":                 "~/.vimrc",
         "vim/snippets":              "~/.vim/snippets",
         "vim/autoload/pathogen.vim": "~/.vim/autoload/pathogen.vim",

@@ -4,7 +4,6 @@
         "~/.vim/bundle",
         "~/.vim/autoload",
         "~/.vim/spell",
-        "~/.config/fish"
     ],
 
     "link": {
@@ -18,9 +17,6 @@
         "tigrc":            "~/.tigrc",
         "xinitrc":          "~/.xinitrc",
         "pokerc":           "~/.pokerc",
-
-        "fish/config.fish":       "~/.config/fish/config.fish",
-        "fish/functions":         "~/.config/fish/functions",
 
         "vim/vimrc":                 "~/.vimrc",
         "vim/snippets":              "~/.vim/snippets",
