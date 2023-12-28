@@ -3,7 +3,7 @@
         "~/.vim",
         "~/.vim/bundle",
         "~/.vim/autoload",
-        "~/.vim/spell",
+        "~/.vim/spell"
     ],
 
     "link": {
