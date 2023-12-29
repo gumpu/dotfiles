@@ -420,7 +420,8 @@ let g:lightline = {
     \ },
     \ 'component_function': {
     \   'fugitive': 'LightlineFugitive',
-    \   'filename': 'LightlineFilename'
+    \   'filename': 'LightlineFilename',
+    \   'mode': 'LightlineMode',
     \ }
     \ }
 function! LightlineModified()
@@ -442,5 +443,27 @@ function! LightlineFugitive()
     endif
     return ''
 endfunction
+
+function! LightlineMode()
+    return lightline#mode()
+    \   . (exists('g:loaded_eskk') && eskk#is_enabled()
+    \       ? ' (' . eskk#get_mode() . ')'
+    \       : '')
+endfunction
+
+
+
+" User (writable) dictionary
+  let g:eskk#dictionary = {
+  \   'path': '~/.skkdict/user-dict',
+  \   'encoding': 'utf-8',
+  \}
+" System (readonly) dictionary
+  let g:eskk#large_dictionary = {
+  \   'path': '~/.skkdict/system-dict-utf8',
+  \   'encoding': 'utf-8',
+  \}
+"  \   'encoding': 'euc-jp',
+
 
 " vi: spell spl=en

@@ -57,4 +57,9 @@ git clone https://github.com/airblade/vim-gitgutter
 
 git clone https://github.com/itchyny/lightline.vim
 
+
+git clone https://github.com/vimoutliner/vimoutliner.git
+
+git clone https://github.com/vim-skk/eskk.vim.git
+
 # ------------------------ End of file -----------------------------
