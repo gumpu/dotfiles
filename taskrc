@@ -25,7 +25,12 @@ weekstart=Monday
 # Files
 data.location=~/.task
 
-context.work=project:AWS or project:P44 or project:DevEnv or project:OTIS or project:Siemens project:S
-context.home=project:Cleaning or project:Home
-context.euler=project:Euler
-context.game=project:Game or project:FPGA
+news.version=2.6.0
+context.euler.read=project:Euler
+context.euler.write=project:Euler
+context.game.read=project:Game or project:FPGA
+context.game.write=project:Game or project:FPGA
+context.home.read=project:Cleaning or project:Home
+context.home.write=project:Cleaning or project:Home
+context.work.read=project:AWS or project:P44 or project:DevEnv or project:OTIS or project:Siemens project:S
+context.work.write=project:AWS or project:P44 or project:DevEnv or project:OTIS or project:Siemens project:S

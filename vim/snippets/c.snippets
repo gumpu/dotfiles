@@ -2,11 +2,13 @@ snippet impl
 	@implement{STMA-${0}}
 
 snippet for
-	for(i = 0; i < ${0}; i++) {
+	for(unsigned i = 0; i < ${0}; i++) {
 	    /* code */
 	}
 
 snippet main
+	#include <stdlib.h>
+
 	int main(int argc, char** argv)
 	{
 		return EXIT_SUCCESS;

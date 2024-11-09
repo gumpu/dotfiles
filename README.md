@@ -35,16 +35,12 @@ are:
 - tmux
 - inkscape
 - blender
-- fish (shell)
-- surf (webbrowser)
-- kb
+- nb
 
-This on Ubuntu with dwm <https://dwm.suckless.org/> as Window Manager.
-Also works under Arch and Raspberry Pi OS.
+This on Xubuntu.
+Also works under Raspberry Pi OS.
 
 My favourite console font: <https://dtinth.github.io/comic-mono-font/>
-
-My favourite terminal: <https://st.suckless.org/>
 
 ## Disclaimer
 

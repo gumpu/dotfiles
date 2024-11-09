@@ -23,9 +23,13 @@
 --ignore-directory=is:build_tiva
 --ignore-directory=is:build_pp
 --ignore-directory=is:build_fp
+--ignore-directory=is:build_x86_ctrl_diagnostic
+--ignore-directory=is:build_x86_dru_ctrl_diagnostic
+--ignore-directory=is:build_x86_dru_diagnostic
 --ignore-directory=is:configuration
 --ignore-directory=is:docs
 --ignore-file=is:tags
+--ignore-file=is:cscope.out
 
 # Bazaar
 # http://bazaar.canonical.com/

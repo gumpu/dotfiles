@@ -37,12 +37,10 @@ git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
 git clone https://github.com/garbas/vim-snipmate.git
 # ----------------------------------------------------------------------------
 # Syntax highlighting for MiniZinc files
-git clone git@github.com:paolodragone/vim-pymzn.git
-
-
+# git clone git@github.com:paolodragone/vim-pymzn.git
 
 # Syntax highlighting for the fish shell
-git clone git@github.com:dag/vim-fish.git
+# git clone git@github.com:dag/vim-fish.git
 
 # Send lines from your source file to be executed by some interpretor in another
 # window.  Makes vim an ideal R gui.
@@ -58,8 +56,8 @@ git clone https://github.com/airblade/vim-gitgutter
 git clone https://github.com/itchyny/lightline.vim
 
 
-git clone https://github.com/vimoutliner/vimoutliner.git
+# git clone https://github.com/vimoutliner/vimoutliner.git
 
-git clone https://github.com/vim-skk/eskk.vim.git
+# git clone https://github.com/vim-skk/eskk.vim.git
 
 # ------------------------ End of file -----------------------------

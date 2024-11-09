@@ -1,17 +1,6 @@
 " vi: fdm=marker foldenable
 "
 " Frans Slothouber
-"
-
-" From <https://github.com/dag/vim-fish>
-" ""Vim needs a more POSIX compatible shell than fish for certain
-" functionality to work, such as :%!, compressed help pages and many
-" third-party addons. If you use fish as your login shell or launch Vim from
-" fish, you need to set shell to something else in your ~/.vimrc, for
-" example:""
-if &shell =~# 'fish$'
-    set shell=bash
-endif
 
 " This should always be first.
 " Pathogen is very handy. Allows you to add and more important
@@ -89,6 +78,10 @@ augroup SpellUnderline
     \   guisp=Red
   augroup END
 
+
+" Show the 90th column in a different color.
+set colorcolumn=80
+
 set encoding=utf-8
 set showbreak=↪
 set number
@@ -101,9 +94,11 @@ syntax enable
 set t_Co=256
 " Ideally this would change automatically based on the amount of ambient light
 " or the current terminal colors   TODO FIXME
-set background=dark
-" set background=light
+"
+" set background=dark
+set background=light
 colorscheme solarized
+"
 " For some reason other colors than these show up as gray...
 hi Search cterm=NONE ctermfg=red ctermbg=black
 "
@@ -161,7 +156,7 @@ if $FAST
     " Highlight the line the cursor is on.
     " Not advisable for slow connections.
     set cursorline
-
+"++
     " Make the line numbers relative to the current line
     " This makes is real easy to jump to the right line
     " with   k and j   (i.e.  5j 12j 3k etc)
@@ -181,9 +176,9 @@ endif
 " i=included files,
 " kspell=current active spell checking
 " Switching on too many of these really slows the search
-
+"++
 set complete=.,w,b,t,kspell
-
+"++
 " Search for tags in tags file and look for it up
 " in the directory tree too.
 set tags=tags;
@@ -198,7 +193,7 @@ set tags=tags;
 " Better to add this to .lvimrc in the directory of the files
 " you want to have spell-checked.
 set nospell
-
+"++
 " And I usually write in English
 set spelllang=en
 " }}}
@@ -210,18 +205,18 @@ set spelllang=en
 " '20 remember mark for up to 20 files
 " \" don't store more than 500 lines of registers
 set viminfo='20,\"500
-
+"++
 " The % makes it remember the buffers from a previous setting,
 " but this is dangerous when you have multiple copies of a file in
 " different directories as you might end up editing the wrong file.
 " set viminfo='20,\"500,%
-
+"++
 " Keep 500 lines of command line history
 set history=500
-
+"++
 " Never switch this off as per manual.
 set magic
-
+"++
 " Expand tabs to spaces, tabs are EVIL!
 set expandtab
 
@@ -247,7 +242,7 @@ nnoremap <F5> :read !/home/frans/bin/static_prototype.py %:p<CR>
 
 "===================== remove spaces at the end of a line =================
 autocmd BufWritePre * %s/\s\+$//e
-
+"++
 "==========================================================================
 " Airline
 " {{{
@@ -309,7 +304,7 @@ let g:snipMate.snippet_version = 1
 " }}}
 "==========================================================================
 "
-
+"++
 let g:asmsyntax = "gas"
 "
 " Slime is the best thing since sliced bread
@@ -407,13 +402,13 @@ if has("cscope")
     nmap <C-@><C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
     nmap <C-@><C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
     nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
-
+"
 endif
 " }}}
 
 " let g:lightline.colorscheme = 'solarized'
 let g:lightline = { 'colorscheme': 'solarized', }
-
+"
 let g:lightline = {
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
@@ -443,16 +438,13 @@ function! LightlineFugitive()
     endif
     return ''
 endfunction
-
+"
 function! LightlineMode()
     return lightline#mode()
     \   . (exists('g:loaded_eskk') && eskk#is_enabled()
     \       ? ' (' . eskk#get_mode() . ')'
     \       : '')
 endfunction
-
-
-
 " User (writable) dictionary
   let g:eskk#dictionary = {
   \   'path': '~/.skkdict/user-dict',
@@ -464,6 +456,4 @@ endfunction
   \   'encoding': 'utf-8',
   \}
 "  \   'encoding': 'euc-jp',
-
-
 " vi: spell spl=en
