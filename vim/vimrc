@@ -79,7 +79,7 @@ augroup SpellUnderline
   augroup END
 
 
-" Show the 90th column in a different color.
+" Show the 80th column in a different color.
 set colorcolumn=80
 
 set encoding=utf-8
@@ -237,7 +237,7 @@ set formatoptions=qrtcl
 "======== Compiling Code ==================================
 " {{{
 nnoremap <F2> :copen<CR>
-nnoremap <F5> :read !/home/frans/bin/static_prototype.py %:p<CR>
+nnoremap <F5> :read !/home/developer/bin/static_prototype.py %:p<CR>
 " }}}
 
 "===================== remove spaces at the end of a line =================
@@ -267,6 +267,12 @@ autocmd BufWritePre * %s/\s\+$//e
 " let g:airline_symbols.linenr = ' :'
 " let g:airline_symbols.maxlinenr = '☰ '
 " let g:airline_symbols.dirty='⚡'
+"
+
+" Loading all extensions makes vim *VERY* slow
+" when editing large files
+" let g:airline_extensions = ['branch', 'tabline']
+
 " }}}
 
 "==========================================================================
@@ -285,7 +291,8 @@ autocmd BufWritePre * %s/\s\+$//e
 " {{{
 " <https://github.com/embear/vim-localvimrc>
 let g:localvimrc_sandbox=0
-let g:localvimrc_whitelist='/home/frans/Documents/.*'
+let g:localvimrc_whitelist='/home/developer/Documents/.*'
+let g:localvimrc_whitelist+='/home/developer/Desktop/.*'
 " }}}
 "==========================================================================
 " Replaced by Slime
@@ -445,7 +452,6 @@ function! LightlineMode()
     \       ? ' (' . eskk#get_mode() . ')'
     \       : '')
 endfunction
-"
 " User (writable) dictionary
   let g:eskk#dictionary = {
   \   'path': '~/.skkdict/user-dict',
