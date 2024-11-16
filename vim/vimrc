@@ -445,6 +445,7 @@ function! LightlineMode()
     \       ? ' (' . eskk#get_mode() . ')'
     \       : '')
 endfunction
+"
 " User (writable) dictionary
   let g:eskk#dictionary = {
   \   'path': '~/.skkdict/user-dict',
